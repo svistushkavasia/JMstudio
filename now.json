@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "example-app",
+  "builds": [
+    { "src": "public/**", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "public/index.html" },
+    { "src": "/faq", "dest": "public/index.html" },
+    { "src": "/partners", "dest": "public/index.html" },
+    { "src": "/contacts", "dest": "public/index.html" },
+    { "src": "/(.+)", "dest": "public/$1" }
+  ]
+}
