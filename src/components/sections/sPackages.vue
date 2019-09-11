@@ -5,7 +5,7 @@
       .row.full-width.justify-center
         h2(style=`color: #009992; text-shadow: 1px -1px 0px #fff`) Пакеты сотрудничества
       .row.full-width.justify-center
-        span.yellow-highlight Подробности уточняйте у руководителя отдела по корпоративным связям!
+        span.yellow-highlight Подробности уточняйте у руководителя отдела по корпоративным связям
       .row.full-width.justify-center.items-center.q-my-xl
         div(style=`maxWidth: 1300px; width: 100%;`).row.justify-center
           .col-sm-12.col-md-4.row.justify-center
@@ -44,9 +44,10 @@
                 div(style=`width: 20px;height: 20px`).row.mark
                 .col.q-pl-md.row.content-start
                   span.text-caption Доступ к решениям задач, предоставленных компаниям
-              div(style=`margin-top: 17px`).row.full-width.justify-center
-                q-btn(label="Подробнее"
-                  @click="" flat style=`font-family: Russo One; maxWidth: 250px; width:100%; height: 40px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs
+              //- div(style=`margin-top: 12%`).row.full-width.justify-center
+              //-   a(href="/partners/#nat" v-smooth-scroll="{ duration: 1000, offset: -50, container: '' }" style=`maxWidth: 250px; width:100%; text-decoration: none`).row.items-center.relative-position.text-white
+              //-     q-btn(label="Подробнее"
+              //-       @click="" flat style=`font-family: Russo One; maxWidth: 250px; width:100%; height: 40px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs
           .col-sm-12.col-md-4.row.justify-center
             div(style=`border-radius: 25px; background-color:#272727; maxWidth: 400px; width: 100%;`).row.justify-center.content-start.q-pa-md.q-ma-md.q-gutter-xs.text-subtitle2
               .row.full-width.justify-center.items-center.q-mt-lg
@@ -85,9 +86,10 @@
                 div(style=`width: 20px;height: 20px`).row.mark
                 .col.q-pl-md
                   span.text-caption Фотоотчет
-              div(style=`margin-top: 78px`).row.full-width.justify-center
-                q-btn(label="Подробнее"
-                  href="#nat" flat style=`font-family: Russo One; maxWidth: 250px; width:100%; height: 40px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs
+              //- div(style=`margin-top: 31%`).row.full-width.justify-center
+              //-   a(href="/partners#nat" v-smooth-scroll="{ duration: 1000, offset: -50, container: '' }" style=`maxWidth: 250px; width:100%; text-decoration: none`).row.items-center.relative-position.text-white
+              //-     q-btn(label="Подробнее"
+              //-       href="#nat" flat style=`font-family: Russo One; maxWidth: 250px; width:100%; height: 40px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs
           .col-sm-12.col-md-4.row.justify-center
             div(style=`minHeight: 600px; border-radius: 25px; background-color:#272727; width: 100%; maxWidth: 400px`).row.justify-center.content-start.q-pa-md.q-ma-md.q-gutter-xs.text-subtitle2
               .row.full-width.justify-center.items-center.q-mt-lg
@@ -122,10 +124,10 @@
                 div(style=`width: 20px;height: 20px`).row.mark
                 .col.q-pl-md.row.content-start
                   span.text-caption Видеоотчет
-              div(style=`margin-top: 60px`).row.full-width.justify-center
-                a(href="#nat" v-smooth-scroll="{ duration: 1000, offset: -50, container: '' }" style=`maxWidth: 250px; width:100%; text-decoration: none`).row.items-center.relative-position.text-white
-                  span(
-                    flat style=`font-family: Russo One; maxWidth: 250px; width:100%; height: 40px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs.row.items-center.justify-center Подробнее
+              //- div(style=`margin-top: 40%`).row.full-width.justify-center
+              //- router-link(append :to="{hash: '#nat'}" v-smooth-scroll="{ duration: 1000, offset: -50, container: '' }" style=`maxWidth: 250px; width:100%; text-decoration: none`).row.items-center.relative-position.text-white
+              //-     q-btn(label="Подробнее"
+              //-       flat style=`font-family: Russo One; maxWidth: 250px; width:100%; height: 40px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs.row.items-center.justify-center
 </template>
 <script>
 import AOS from 'aos'
@@ -138,6 +140,9 @@ export default {
   },
   created () {
     AOS.init()
+  },
+  beforeDestroy () {
+    // this.$router.push('/partners#nat')
   }
 }
 </script>

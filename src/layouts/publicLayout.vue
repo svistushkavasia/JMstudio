@@ -64,9 +64,10 @@ import { routes } from 'components/config.js'
 import { openURL } from 'quasar'
 import pMenu from 'components/pMenu'
 import pFooter from 'components/pFooter'
+import pParticles from 'components/pParticles'
 export default {
   name: 'mainLayout',
-  components: { pMenu, pFooter },
+  components: { pMenu, pFooter, pParticles },
   meta () {
     return {
       title: this.siteName

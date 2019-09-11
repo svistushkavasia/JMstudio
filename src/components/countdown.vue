@@ -44,12 +44,12 @@ export default {
   },
   methods: {
     tickTack () {
-      this.$log('tickTack  motherfucker')
+      // this.$log('tickTack  motherfucker')
       this.now = Date.now()
     }
   },
   mounted () {
-    this.$log('mounted', Date.now())
+    // this.$log('mounted', Date.now())
     this.timer = setInterval(this.tickTack, 1000)
   },
   beforeDestroy () {

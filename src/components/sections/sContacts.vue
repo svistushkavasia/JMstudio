@@ -41,37 +41,37 @@ export default {
           photo: 'statics/foto_lisa.png',
           link: 'https://vk.com/id139686335',
           name: 'Елизавета Мальцева',
-          position: 'Ответсвенная за участников'
+          position: 'Ответственный за работу с участниками'
         },
         {
           photo: 'statics/foto_sonya.png',
           link: 'https://vk.com/ssssssssssssonia',
           name: 'Софья Глухова',
-          position: 'Руководитель отдела по связям с общественностью'
+          position: 'Ответственный за связи с общественностью'
         },
         {
           photo: 'statics/foto_nat.png',
           link: 'https://vk.com/kulikova.nata',
           name: 'Наталья Куликова',
-          position: 'Руководитель отдела по корпоративным связям'
+          position: 'Ответственный за корпоративные связи'
         },
         {
           photo: 'statics/foto_valera.png',
           link: 'https://vk.com/valyamaslov',
           name: 'Валерий Маслов',
-          position: 'Ответсвенный за логистику'
+          position: 'Ответственный за логистику'
         },
         {
           photo: 'statics/foto_shai.png',
           link: 'https://vk.com/darbyofficial',
-          name: 'Шайдуров Дмитрий',
-          position: 'Дизайнер'
+          name: 'Дмитрий Шайдуров',
+          position: 'Ответсвенный за дизайн'
         },
         {
           photo: 'statics/foto_roma.png',
           link: 'https://vk.com/id31042105',
           name: 'Роман Мотовилов',
-          position: 'Отвественный за академическую часть'
+          position: 'Ответственный за академическую часть'
         }
       ]
     }

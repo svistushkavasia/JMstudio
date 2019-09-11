@@ -1,6 +1,5 @@
 import axios from 'axios'
 import vueSmoothScroll from 'vue2-smooth-scroll'
-import VueParticles from 'vue-particles'
 import carousel from 'vue-owl-carousel'
 import AOS from 'aos'
 import CircularCountDownTimer from 'vue-circular-count-down-timer'
@@ -14,7 +13,6 @@ export default async ({ Vue }) => {
   Vue.prototype.$axios = axios
   // scroll
   Vue.use(vueSmoothScroll)
-  Vue.use(VueParticles)
   Vue.use(carousel)
   Vue.use(AOS)
   Vue.use(CircularCountDownTimer)

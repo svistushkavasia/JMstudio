@@ -2,35 +2,52 @@
   div(:style=`{height: '55px', zIndex: '111'}`).row.full-width.justify-center.z
     div(style=`maxWidth: 1300px; width: 100%; z-index: 111;`).row.full-width.items-center.justify-between
       //- menu desktop
+      q-dialog(:maximized="true" position="bottom" ref="dialogReg")
+        //- .row.window-width.window-height
+          div(style=``).row.justify-center.full-width.bg-white.text-black
+        div(style=`width: 100%; background-color: rgba(0, 153, 146, 0.5) ; padding: 0px 0px;`).row.justify-center.window-height.shadow-0
+          div(style=`height: 55px`).row.full-width
+          div(data-aos="fade" data-aos-delay="2000" style=`transform: translate(-50%, -50%); z-index: 1; left: 50%; top: 50%; position: absolute; maxWidth: 600px; background-color: #fff; border-radius: 15px`).row.justify-center.full-width.q-py-sm
+            div(style=`maxWidth: 600px; width: 100%; margin-bottom: -50px;`).row.justify-end.title.text-black
+              q-btn(round flat icon="clear" color="primary" data-aos="fade" data-aos-delay="1000" @click="$refs.dialogReg.toggle()").q-ma-xs
+            .row.full-width.justify-center.content-center.q-mt-xl.q-mb-md
+              span(style=`font-size: 32px; font-family: Russo One; padding: 0`).text-black.text-center Регистрация на HACKATHON BEST URFU 2019
+              span(style=`font-size: 28px`).text-black.q-mt-md Спасибо за ответ на опрос
+              //- q-btn(data-aos="fade-up" data-aos-delay="400" label="Вернуться"
+              //- @click="$refs.dialogReg.toggle()" style=`font-size: 22px ;maxWidth: 250px; width:100%; height: 70px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);` push).row.z
+          div(style=`maxWidth: 720px; width: 100%; padding-right: 30px; padding-bottom: 0px;`).row.justify-end.title.q-px-sm.text-black
+            q-btn(round flat icon="clear" color="primary" data-aos="fade" data-aos-delay="1000" @click="$refs.dialogReg.toggle()").q-ma-xs.q-mr-sm
+          iframe(data-aos="fade-up" data-aos-delay="600" marginwidth="0" class="" marginheight="0" style=`z-index: 2; text-shadow: 50 50 5px #009992; margin: -50px 0px 0px 10px;` src="https://docs.google.com/forms/d/e/1FAIpQLSdnJA7i9NbjGVCgFt_uTdyUgwqbCxHdkVryNBR7HpAG7g_pGQ/viewform?embedded=true" width="100%" :height="$q.screen.gt.xs ? '2200' : '2700'" frameborder="0") Загрузка…
       div(style=`height: 50px;`).row.items-center
-        div(style=`` @click="$router.push(`/`)").row.neon_mini.items-center.cursor-pointer
-          div(style=`width: 50px; height: 50px`).logo_menu.q-mr-xs
-          .col
-            div.neon_text
-              span H
-              span A
-              span C
-              span K
-              span A
-              span T
-              span H
-              span(style=`color: #009992 `) O
-              span(style=`color: #009992 `) N
-            .row
-            div.neon_text
-              span B
-              span E
-              span S
-              span T
-              span  U
-              span R
-              span F
-              span U
-              span  2
-              span 0
-              span 1
-              span 9
-      .col.fit.gt-sm
+        a(href="#first" v-smooth-scroll="{ duration: 1000, offset: 50, container: '' }" style=`text-decoration: none`).row.items-center.relative-position
+          div(style=``).row.neon_mini.items-center.cursor-pointer
+            div(style=`width: 50px; height: 50px`).logo_menu.q-mr-xs
+            .col
+              div.neon_text
+                span H
+                span A
+                span C
+                span K
+                span A
+                span T
+                span H
+                span(style=`color: #009992 `) O
+                span(style=`color: #009992 `) N
+              .row
+              div.neon_text
+                span B
+                span E
+                span S
+                span T
+                span  U
+                span R
+                span F
+                span U
+                span  2
+                span 0
+                span 1
+                span 9
+      div(v-if="$q.screen.width >= 1050").col.fit
         div().row.fit.items-center.justify-end
           div(
             v-for="(m, mi) in $store.state.main.routes.home" :key="m._id"
@@ -38,33 +55,36 @@
             ).row.items-center.content-center
             //- @click="$router.push('/')"
             a(:href="'#'+m._id" v-smooth-scroll="{ duration: 1000, offset: -50, container: '' }" style=`text-decoration: none`).row.items-center.relative-position
-              q-btn(@click="handleClick(m._id)" :label="m.name" style=`font-family: Russo One` v-ripple="{color: 'primary'}" size="md" flat).q-ma-xs.menu_button
+              q-btn(@click="handleClick(m._id)" :label="m.name" style=`font-family: Russo One` v-ripple="{color: 'primary'}" size="md" flat).q-my-xs.menu_button
           .row.items-center.relative-position
-            q-btn(@click="$router.push('/contacts')" label="Контакты" style=`font-family: Russo One` v-ripple="{color: 'primary'}" size="md" flat).q-ma-xs.menu_button
+            q-btn(@click="$router.push('/contacts')" label="Контакты" style=`font-family: Russo One` v-ripple="{color: 'primary'}" size="md" flat).q-my-xs.menu_button
           .row.items-center.relative-position
-            q-btn(@click="$router.push('/partners')" label="Партнерам" style=`font-family: Russo One` v-ripple="{color: 'primary'}" size="md" flat).q-ma-xs.menu_button
+            q-btn(@click="$router.push('/partners')" label="Партнерам" style=`font-family: Russo One` v-ripple="{color: 'primary'}" size="md" flat).q-my-xs.menu_button
           .row.items-center.relative-position
-            q-btn(@click="$router.push('/faq')" label="Faq" style=`font-family: Russo One` v-ripple="{color: 'primary'}" size="md" flat).q-ma-xs.menu_button
+            q-btn(@click="$router.push('/faq')" label="Faq" style=`font-family: Russo One` v-ripple="{color: 'primary'}" size="md" flat).q-my-xs.menu_button
           .row.items-center.relative-position
             q-btn(label="Регистрация"
-              @click="" flat style=`font-family: Russo One; maxWidth: 250px; width:100%; height: 40px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs
+              @click="$refs.dialogReg.show()" flat style=`font-family: Russo One; maxWidth: 250px; width:100%; height: 40px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs
       //- phone desktop
       // div(:style=`{ maxWidth:$q.screen.gt.sm ? '220px' : '460px', color: 'black' }`
       //   ).row.full-height.content-center.gt-sm
       //   div(@click="openCityNumberModel").row.full-width.justify-center.q-pr-xs
       //     span(style=`fontSize: 1.5rem; fontWeight: 500;`) {{ $store.state.main.config.info.phone }}
       //- toggle menu
-      div(@click="$root.$emit('toggleRightDrawer')" style=`width: 50px; height: 50px;`
-        ).row.items-center.justify-center.lt-md
+      div(v-if="$q.screen.width <= 1050" @click="$root.$emit('toggleRightDrawer')" style=`width: 50px; height: 50px;`
+        ).row.items-center.justify-centerd
         q-btn(icon="menu" color="primary" round flat)
 </template>
 
 <script>
+import AOS from 'aos'
 export default {
   name: 'pMenu',
+  components: { AOS },
   data () {
     return {
-      tab: 'main'
+      tab: 'main',
+      reg: false
     }
   },
   watch: {
@@ -78,10 +98,18 @@ export default {
     handleClick (path) {
       if (this.$route.path !== '/') this.$router.push('/')
     }
+  },
+  created () {
+    AOS.init()
   }
 }
 </script>
 <style lang="stylus">
+iframe {
+border:0px;
+margin:1em auto;
+box-shadow: 0 0 0px;
+}
 .menu_button
   // text-shadow: 0
   color: #009992;

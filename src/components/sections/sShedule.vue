@@ -50,7 +50,7 @@
                 div(class="back" style=`background-color: #009992; border-radius:100px;`).row.justify-center.items-center
                   div(style=`width: 100px`)
                     .row.full-width.justify-center
-                      span.text-center.shedule_title Работа над заданиями
+                      span.text-center.shedule_title Начало работы
                     .row.full-width.justify-center
                       span.shedule_body.yellow-highlight 13:00-15:30
                     .row.full-width.justify-center
@@ -100,7 +100,7 @@
                 div(class="back" style=`background-color: #009992; border-radius:100px;`).row.justify-center.items-center
                   div(style=`width: 100px`)
                     .row.full-width.justify-center
-                      span.text-center.shedule_title Кофе брейк
+                      span.text-center.shedule_title Кофе-брейк
                     .row.full-width.justify-center
                       span.shedule_body.yellow-highlight 00:00-00:30
                     .row.full-width.justify-center
@@ -143,7 +143,7 @@
                   div(class="back" style=`background-color: #009992; border-radius:100px;`).row.justify-center.items-center
                     div(style=`width: 100px`)
                       .row.full-width.justify-center
-                        span.text-center.shedule_title Обед
+                        span.text-center.shedule_title Презентации
                       .row.full-width.justify-center
                         span.shedule_body.yellow-highlight 13:00-15:00
                       .row.full-width.justify-center

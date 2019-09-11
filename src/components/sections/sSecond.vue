@@ -56,6 +56,18 @@
                 .hex2.middle.lightgreen
                   span(style=`margin: 0px 0px; font-size: 10px; position: absolute; width: 90px; margin-left: -17px; margin-top: 25px`).text-center.text-white Увлекаешься программиро- ванием
                 .hex2.bottom.lightgreen
+        //- div(style=``).row.justify-center.br.gt-xs
+        //-   //- .clipper.br.row.justify-center
+        //-   //- .clipper.row.full-width.justify-center
+        //-     .shape3.row.justify-center.br
+        //-       .shape4.br
+        //-       //- .shape
+        //-   .row.window-height.window-width.justify-center
+        //-     div(style=`width: 400px; height: 400px; position: relative`).box
+        //-       span
+        //-       span
+        //-       span
+        //-       span
         .row.full-width.justify-center.q-my-xs.gt-xs
           div(style=`padding-right: 60px`).row.q-my-md
             //- ЛЕВЫЙ СТОЛБЕЦ
@@ -107,27 +119,30 @@
                 .hex.bottom.lightgreen
       div(style=`maxWidth: 800px; width: 100%; font-family: Russo One; z-index: 100`).row.justify-center.q-px-md.q-my-xl
           div(data-aos="fade-right" style=`width: 130px; height: 130px; background: #009992;`).row.q-mr-md.gt-xs
-            div(style=`font-size: 24px; `).row.full-width.justify-center.q-mt-md
-              span 26-27
-              span OCTOBER
-            .row.full-width.justify-center.q-mt-xs
-              span 2019
+            div(style=`font-size: 24px; `).row.full-width.justify-center
+              .row.full-width.justify-center.q-pt-xs
+                span.self-start 19-20
+              .row.full-width.justify-center
+                span.self-center OCTOBER
+              .row.full-width.justify-center.q-pb-xs
+                span.self-end 2019
           div(data-aos="fade-up" style=`width: 85px; height: 85px; background: #009992;`).row.q-mr-md.lt-sm
             div(style=`font-size: 12px; font-family: Russo One;`).row.full-width.justify-center
-              span 26-27
-              span OCTOBER
-            .row.full-width.justify-center
-              span 2019
+              .row.full-width.justify-center
+                span.self-end 19-20
+                span.self-start OCTOBER
+              .row.full-width.justify-center
+                span.self-end 2019
           div(data-aos="fade-left" style=`font-size: 18px;`).col.text-justify.q-mb-xl.gt-xs
             span(style=`z-index: 100; font-family: Roboto Slab;
                         font-style: normal;
                         font-weight: bold;
-                        color: #FFFFFF;`) Ты на сайте IT-мероприятия HACKATHON BEST UrFU 2019, которое пройдет 19-20 октября в Екатеринбурге. Наш HACKATHON — это марафон программирования, на котором тебе нужно будет устроить настоящий мозговой штурм, чтобы за 24 часа справиться с заданием от IT-компаний города.
-          div(data-aos="fade-up" style=`font-size: 10px;`).col.text-justify.q-mb-xs.lt-sm
+                        color: #FFFFFF;`) Ты на сайте IT-мероприятия HACKATHON BEST UrFU 2019, которое пройдет 19-20 октября в Екатеринбурге.<br /> Наш HACKATHON — это марафон программирования, на котором тебе нужно будет устроить настоящий мозговой штурм, чтобы за 24 часа справиться с заданием от IT-компаний города.
+          div(data-aos="fade-up" style=`font-size: 10px;`).col.text-justify.q-mb-xs.lt-sm.q-px-xs
             span(style=`z-index: 100; font-family: Roboto Slab;
                         font-style: normal;
                         font-weight: bold;
-                        color: #FFFFFF;`) Ты на сайте IT-мероприятия HACKATHON BEST UrFU 2019, которое пройдет 19-20 октября в Екатеринбурге. Наш HACKATHON — это марафон программирования, на котором тебе нужно будет устроить настоящий мозговой штурм, чтобы за 24 часа справиться с заданием от IT-компаний города.
+                        color: #FFFFFF;`) Ты на сайте IT-мероприятия HACKATHON BEST UrFU 2019, которое пройдет 19-20 октября в Екатеринбурге.<br />Наш HACKATHON — это марафон программирования, на котором тебе нужно будет устроить настоящий мозговой штурм, чтобы за 24 часа справиться с заданием от IT-компаний города.
 </template>
 <script>
 import AOS from 'aos'
@@ -144,6 +159,138 @@ export default {
 }
 </script>
 <style lang="stylus">
+.box:before{
+  content: '';
+  // position:absolute;
+  top:0;
+  left: -100%;
+  width:100%;
+  height:100%;
+  background: rgba(255,255,255,0.1);
+  transition:0.5s;
+  pointer-events: none;
+}
+.box:hover:before{
+  left:-50%;
+  transform: skewX(-5deg);
+}
+.box.content{
+  position:absolute;
+  top:15px;
+  left:15px;
+  right:15px;
+  bottom:15px;
+  border:1px solid #f0a591;
+  padding:20px;
+  text-align:center;
+  box-shadow: 0 5px 10px rgba(9,0,0,0.5);
+}
+.box span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+.box span:nth-child(1)
+{
+  transform:rotate(0deg);
+}
+.box span:nth-child(2)
+{
+  transform:rotate(90deg);
+}
+.box span:nth-child(3)
+{
+  transform:rotate(180deg);
+}
+.box span:nth-child(4)
+{
+  transform:rotate(270deg);
+}
+.box span:before
+{
+  content: '';
+  position: absolute;
+  width:100%;
+  height: 2px;
+  background: #50dfdb;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+  transform:scaleX(0);
+  transform-origin: left;
+  }
+  50%
+  {
+    transform:scaleX(1);
+  transform-origin: left;
+  }
+  50.1%
+  {
+    transform:scaleX(1);
+  transform-origin: right;
+  }
+  100%
+  {
+    transform:scaleX(0);
+  transform-origin: right;
+  }
+}
+// .shape{
+//  border-radius: 90px;
+//  width: 95px;
+//  height: 70px;
+//  margin-top: 0px
+// //  border: 4px solid white;
+// overflow:hidden
+// background: #000
+// }
+// .shape2{
+//  border-radius: 20000px;
+//  width: 20000px;
+//  height: 20000px;
+//  margin-top: -19800px
+// //  border: 4px solid white;
+// background: #fff
+// }
+.clipper {
+ width: 1000px;
+ height: 150px;
+ border-radius: 400px;
+ overflow:hidden
+}
+.shape2 {
+  margin: 0 auto;
+  width: 7em; height:9em;
+  /* WebKit browsers, old syntax */
+  background: -webkit-radial-gradient(50% 0, circle, transparent 70%, white 30%);
+  border-radius: 200px;
+  /* IE10, current versions of Firefox and Opera */
+  background: radial-gradient(circle at 50% 0, transparent 60%, white 30%);
+}
+.shape3{
+  width: 600px;
+  height: 500px;
+  border-radius: 500px;
+  background-color: #fff;
+  transform: rotateX(86deg);
+  position: absolute;
+  margin-top: -150px
+}
+.shape4{
+  width: 600px;
+  height: 450px;
+  border-radius: 500px;
+  background-color: #000;
+  transform: rotateX(0deg);
+  margin-top: 0px;
+  // position: absolute
+}
 .hex2.middle.stroke
   clear: left;
   margin-top: 0px

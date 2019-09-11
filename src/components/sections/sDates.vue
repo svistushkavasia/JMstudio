@@ -2,74 +2,92 @@
   .row.full-width
     .row.full-width.justify-center
       //- ДАТЫ
+      q-dialog(:maximized="true" position="bottom" ref="dialogReg")
+        //- .row.window-width.window-height
+          div(style=``).row.justify-center.full-width.bg-white.text-black
+        div(style=`width: 100%; background-color: rgba(0, 153, 146, 0.5) ; padding: 0px 0px;`).row.justify-center.window-height.shadow-0
+          div(style=`height: 55px`).row.full-width
+          div(data-aos="fade" data-aos-delay="2000" style=`transform: translate(-50%, -50%); z-index: 1; left: 50%; top: 50%; position: absolute; maxWidth: 600px; background-color: #fff; border-radius: 15px`).row.justify-center.full-width.q-py-sm
+            div(style=`maxWidth: 600px; width: 100%; margin-bottom: -50px;`).row.justify-end.title.text-black
+              q-btn(round flat icon="clear" color="primary" data-aos="fade" data-aos-delay="1000" @click="$refs.dialogReg.toggle()").q-ma-xs
+            .row.full-width.justify-center.content-center.q-mt-xl.q-mb-md
+              span(style=`font-size: 32px; font-family: Russo One; padding: 0`).text-black.text-center Регистрация на HACKATHON BEST URFU 2019
+              span(style=`font-size: 28px`).text-black.q-mt-md Спасибо за ответ на опрос
+              //- q-btn(data-aos="fade-up" data-aos-delay="400" label="Вернуться"
+              //- @click="$refs.dialogReg.toggle()" style=`font-size: 22px ;maxWidth: 250px; width:100%; height: 70px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);` push).row.z
+          div(style=`maxWidth: 720px; width: 100%; padding-right: 30px; padding-bottom: 0px;`).row.justify-end.title.q-px-sm.text-black
+            q-btn(round flat icon="clear" color="primary" data-aos="fade" data-aos-delay="1000" @click="$refs.dialogReg.toggle()").q-ma-xs.q-mr-sm
+          iframe(data-aos="fade-up" data-aos-delay="600" marginwidth="0" class="" marginheight="0" style=`z-index: 2; text-shadow: 50 50 5px #009992; margin: -50px 0px 0px 10px;` src="https://docs.google.com/forms/d/e/1FAIpQLSdnJA7i9NbjGVCgFt_uTdyUgwqbCxHdkVryNBR7HpAG7g_pGQ/viewform?embedded=true" width="100%" :height="$q.screen.gt.xs ? '2200' : '2700'" frameborder="0") Загрузка…
       .row.full-width.justify-center
-        h2(data-aos="fade-up" style=`color: #009992; text-shadow: 1px -1px 0px #fff; z-index: 100`).q-my-xl До мероприятия осталось!
+        h2(data-aos="fade-up" style=`color: #009992; text-shadow: 1px -1px 0px #fff; z-index: 100`).q-my-xl До мероприятия осталось
       //- выравнивание по центру
       div(style=``).row.full-width.justify-center.q-my-md
         div(id="timer" style=`z-index: 100` class="timer")
           countdown(date="October 26, 2019")
       div(style=`z-index: 100; box-shadow: 0 0px 100px #009992`).row.full-width.justify-center.q-pb-xl.bg-black
-        .row.full-width.justify-center
-          h2(data-aos="fade-up" style=`color: #009992; text-shadow: 1px -1px 0px #fff`).q-mb-xl Этапы проведения
-        //- ЭЛЕМЕНТ КРУГИ
-        .row.full-width.justify-center.q-px-xl
-          div(data-aos="fade-right" data-aos-delay="200" ).col-sm-12.col-md.row.justify-center.q-my-md
-            .ball.row.items-center.justify-center
-              .inside_ball.row.items-center.justify-center
-                .inside_img_1
-            .row.full-width.items-center.justify-center.q-mt-md
-              .row.full-width.justify-center.text-center
-                span Начало регистрации
-              .row.full-width.justify-center.yellow-highlight
-                span 10.09.2019
-          div(data-aos="fade-right" data-aos-delay="300").arrow_r.q-mx-xs.gt-sm
-          .row.full-width.justify-center.lt-md
-            div(data-aos="fade-down" data-aos-delay="300").arrow_b.q-my-xs
-          div(data-aos="fade-right" data-aos-delay="400").col-sm-12.col-md.row.justify-center.q-my-md
-            .ball.row.items-center.justify-center
-              .inside_ball.row.items-center.justify-center
-                .inside_img_2
-            .row.full-width.items-center.justify-center.q-mt-md
-              .row.full-width.justify-center.text-center
-                span Конец регистрации
-              .row.full-width.justify-center.yellow-highlight
-                span 13.10.2019
-          div(data-aos="fade-right" data-aos-delay="500").arrow_r.q-mx-xs.gt-sm
-          .row.full-width.justify-center.lt-md
-            div(data-aos="fade-down" data-aos-delay="500").arrow_b.q-my-xs.lt-md.row
-          div(data-aos="fade-right" data-aos-delay="200").col-sm-12.col-md.row.justify-center.q-my-md
-            .ball.row.items-center.justify-center
-              .inside_ball.row.items-center.justify-center
-                .inside_img_3
-            .row.full-width.items-center.justify-center.q-mt-md
-              .row.full-width.justify-center.text-center
-                span Старт тестового задания
-              .row.full-width.justify-center.yellow-highlight
-                span 14.09.2019
-          div(data-aos="fade-right" data-aos-delay="300").arrow_r.q-mx-xs.gt-sm
-          .row.full-width.justify-center.lt-md
-            div(data-aos="fade-down" data-aos-delay="300").arrow_b.q-my-xs.lt-md.row
-          div(data-aos="fade-right" data-aos-delay="400").col-sm-12.col-md.row.justify-center.q-my-md
-            .ball.row.items-center.justify-center
-              .inside_ball.row.items-center.justify-center
-                .inside_img_4
-            .row.full-width.items-center.justify-center.q-mt-md
-              .row.full-width.justify-center.text-center
-                span Готовое тестовое задание
-              .row.full-width.justify-center.yellow-highlight
-                span 21.10.2019
-          div(data-aos="fade-right" data-aos-delay="500").arrow_r.q-mx-xs.gt-sm
-          .row.full-width.justify-center.lt-md
-            div(data-aos="fade-down" data-aos-delay="500").arrow_b.q-my-xs.lt-md.row
-          div(data-aos="fade-right" data-aos-delay="600").col-sm-12.col-md.row.justify-center.q-my-md
-            .ball.row.items-center.justify-center
-              .inside_ball.row.items-center.justify-center
-                .inside_img_5
-            .row.full-width.items-center.justify-center.q-mt-md
-              .row.full-width.justify-center.text-center
-                span HACKATHON
-              .row.full-width.justify-center.yellow-highlight
-                span 19 - 20.10.2019
+        div(style=``)
+          .row.full-width.justify-center
+            h2(data-aos="fade-up" style=`color: #009992; text-shadow: 1px -1px 0px #fff`).q-mb-xl Этапы проведения
+          //- ЭЛЕМЕНТ КРУГИ
+          .row.full-width.justify-center
+            div(style=`width: 300px` data-aos="fade-right" data-aos-delay="200" ).col-sm-12.row.justify-center.q-my-md
+              .ball.row.items-center.justify-center
+                .inside_ball.row.items-center.justify-center
+                  .inside_img_1
+              .row.full-width.items-center.justify-center.q-mt-md
+                .row.full-width.justify-center.text-center
+                  span Начало регистрации
+                .row.full-width.justify-center.yellow-highlight
+                  span 12.09.2019
+            //- div(style=`height: 300px;`).row.justify-center.gt-sm
+              div(data-aos="fade-right").arrow_r.q-mx-xs
+            .row.full-width.justify-center.lt-md
+              div(data-aos="fade-down" data-aos-delay="100").arrow_b.q-my-xs
+            div(style=`width: 300px` data-aos="fade-right" data-aos-delay="200").col-sm-12.row.justify-center.q-my-md
+              .ball.row.items-center.justify-center
+                .inside_ball.row.items-center.justify-center
+                  .inside_img_2
+              .row.full-width.items-center.justify-center.q-mt-md
+                .row.full-width.justify-center.text-center
+                  span Конец регистрации
+                .row.full-width.justify-center.yellow-highlight
+                  span 06.10.2019
+            //- div(data-aos="fade-right" data-aos-delay="500").arrow_r.q-mx-xs.gt-sm
+            .row.full-width.justify-center.lt-md
+              div(data-aos="fade-down" data-aos-delay="200").arrow_b.q-my-xs.lt-md.row
+            div(style=`width: 300px` data-aos="fade-right" data-aos-delay="200").col-sm-12.row.justify-center.q-my-md
+              .ball.row.items-center.justify-center
+                .inside_ball.row.items-center.justify-center
+                  .inside_img_3
+              .row.full-width.items-center.justify-center.q-mt-md
+                .row.full-width.justify-center.text-center
+                  span Старт тестового задания
+                .row.full-width.justify-center.yellow-highlight
+                  span 07.10.2019
+            //- div(data-aos="fade-right" data-aos-delay="300").arrow_r.q-mx-xs.gt-sm
+            .row.full-width.justify-center.lt-md
+              div(data-aos="fade-down" data-aos-delay="300").arrow_b.q-my-xs.lt-md.row
+            div(style=`width: 300px` data-aos="fade-right" data-aos-delay="200").col-sm-12.row.justify-center.q-my-md
+              .ball.row.items-center.justify-center
+                .inside_ball.row.items-center.justify-center
+                  .inside_img_4
+              .row.full-width.items-center.justify-center.q-mt-md
+                .row.full-width.justify-center.text-center
+                  span Готовое тестовое задание
+                .row.full-width.justify-center.yellow-highlight
+                  span 14.10.2019
+            //- div(data-aos="fade-right" data-aos-delay="500").arrow_r.q-mx-xs.gt-sm
+            .row.full-width.justify-center.lt-md
+              div(data-aos="fade-down" data-aos-delay="400").arrow_b.q-my-xs.lt-md.row
+            div(style=`width: 300px` data-aos="fade-right" data-aos-delay="200").col-sm-12.row.justify-center.q-my-md
+              .ball.row.items-center.justify-center
+                .inside_ball.row.items-center.justify-center
+                  .inside_img_5
+              .row.full-width.items-center.justify-center.q-mt-md
+                .row.full-width.justify-center.text-center
+                  span HACKATHON
+                .row.full-width.justify-center.yellow-highlight
+                  span 19 - 20.10.2019
           //- //- ТЕКСТ СЛЕВА
           //- div(style=`maxWidth: 200px;  width: 100%;`).row.text-white.text-right.text-right.content-start.q-mr-md
           //-   div(style=`margin-top: 110px; height: 50px`).row
@@ -134,8 +152,8 @@
                 div(data-aos="fade-up" style=`position: absolute; maxWidth: 300px; width: 100%; height: 300px;`).row.red-pen
               .row.full-width.justify-center
                 div(data-aos="fade-up" style=`margin-top: 300px; maxWidth: 600px; width: 100%; height: 250px;`).row.justify-center.content-start
-                  h2.row.full-width.justify-center WEB DEVELOPMENT
-                  span(style=`width: 300px`).row.text-center Если интерисуешься разработкой прототипов для обработка наборов данных
+                  h2.row.full-width.justify-center DATA SCIENCE
+                  span(style=`width: 300px`).row.text-center Если интересуешься разработкой прототипов для обработки наборов данных
             .col.gt-sm
               .row.full-width.full-height.justify-center
                 div(data-aos="fade" style=`width: 0px; outline: 2px solid #fff`).full-height
@@ -145,8 +163,8 @@
                 div(data-aos="fade-up" style=`position: absolute; maxWidth: 300px; width: 100%; height: 300px;`).row.blue-pen
               .row.full-width.justify-center
                 div(data-aos="fade-up" style=`margin-top: 300px; maxWidth: 600px; width: 100%; height: 250px;`).row.justify-center.content-start
-                  h2.row.full-width.justify-center DATA SCIENCE
-                  span(style=`width: 300px`).row.text-center Если интерисуешься разработкой сайтов и веб-приложений
+                  h2.row.full-width.justify-center WEB DEVELOPMENT
+                  span(style=`width: 300px`).row.text-center Если интересуешься разработкой сайтов и веб-приложений
             //- .col.gt-xs
             //-   div(data-aos="fade" style=`width: 0px; outline: 2px solid #fff`).full-height
             //- div(data-aos="fade-left" style=`width: 500px; height: 300px;`).row.blue-pen
@@ -163,11 +181,11 @@
         h5(data-aos="fade-up" data-aos-delay="300").z.text-center Дело за малым — собирай команду и регистрируйся.
       .row.full-width.justify-center.q-my-xl
         q-btn(data-aos="fade-up" data-aos-delay="400" label="Регистрация"
-              @click="" style=`font-size: 22px ;maxWidth: 250px; width:100%; height: 70px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);` push).row.z
+              @click="$refs.dialogReg.show()" style=`font-size: 22px ;maxWidth: 250px; width:100%; height: 70px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);` push).row.z
       div(data-aos="fade-up" data-aos-delay="400" style=`width: 1100px`).row.justify-center.q-my-xl.z.q-px-md
         div(style=`width: 50px; height: 50px`).row.warn
         .col.q-ml-md.items-center
-          span(style=`font-size: 15px`).z.text-left А еще, секретная информация для тех, кто дочитал до конца — лучшие участники могут получить приглашение на стажировку в компании, которые разрабатывали задания.
+          span(style=`font-size: 15px`).z.text-left А еще, секретная информация для тех, кто дочитал до конца — лучшие участники могут получить приглашение на стажировку в компаниях, которые разрабатывали задания.
 </template>
 <script>
 import AOS from 'aos'
@@ -216,8 +234,8 @@ export default {
   background-image: url("~assets/inside_img_3.svg");
   background-repeat: no-repeat;
   background-position: center;
-  width: calc(50px + (60 - 50) * ((100vw - 320px) / (1600 - 320)));
-  height: calc(50px + (60 - 50) * ((100vw - 320px) / (1600 - 320)));
+  width: calc(80px + (80 - 80) * ((100vw - 320px) / (1600 - 320)));
+  height: calc(80px + (80 - 80) * ((100vw - 320px) / (1600 - 320)));
   opacity: 1;
 .inside_img_4
   background-image: url("~assets/inside_img_4.svg");
@@ -241,30 +259,34 @@ export default {
   width: calc(25px + (50 - 25) * ((100vw - 320px) / (1600 - 320)));
   height: calc(45px + (90 - 45) * ((100vw - 320px) / (1600 - 320)));
   opacity: 0.7;
-  transform: translate(-50% -50%);
+  transform: translate(50%, 50%);
+.arrow_b::before
+  transform: translate(-50%, -50%);
 .arrow_r
   background-image: url("~assets/arrow_primary.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: calc(0px + (90 - 0) * ((100vw - 320px) / (1600 - 320)));
-  height: calc(0px + (50 - 0) * ((100vw - 320px) / (1600 - 320)));
+  width: calc(0px + (50 - 0) * ((100vw - 320px) / (1600 - 320)));
+  height: calc(0px + (30 - 0) * ((100vw - 320px) / (1600 - 320)));
   opacity: 0.7;
-  margin-top: calc(50px + (80 - 50) * ((100vw - 320px) / (1600 - 320)));
+  margin-top: 150%;
   transform: translate(-50% -50%);
 .ball
   background-color: #009992;
-  height: calc(120px + (170 - 120) * ((100vw - 320px) / (1600 - 320)));
-  width: calc(120px + (170 - 120) * ((100vw - 320px) / (1600 - 320)));
+  height: calc(170px + (170 - 170) * ((100vw - 320px) / (1600 - 320)));
+  width: calc(170px + (170 - 170) * ((100vw - 320px) / (1600 - 320)));
   border-radius: 50%;
-  margin-left: calc(0 + (205 - 0) * ((100vw - 320px) / (1600 - 320)));
+  // margin-left: calc(0 + (205 - 0) * ((100vw - 320px) / (1600 - 320)));
+  // border: 4px solid #fff;
   opacity: 0.9;
 .inside_ball
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: calc(80px + (100 - 80) * ((100vw - 320px) / (1600 - 320)));
-  height: calc(80px + (100 - 80) * ((100vw - 320px) / (1600 - 320)));
+  width: calc(100px + (100 - 100) * ((100vw - 320px) / (1600 - 320)));
+  height: calc(100px + (100 - 100) * ((100vw - 320px) / (1600 - 320)));
+  border: 4px solid #fff;
 .purple_arrow
   background-image: url("~assets/arrow_primary_L.svg");
   background-repeat: no-repeat;

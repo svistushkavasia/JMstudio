@@ -3,25 +3,39 @@
   div(:style=`{height: '', zIndex: '1000'}`).row.full-width.justify-center.bg-white
     div(style=`maxWidth: 1300px; width: 100%; margin-top: 50px`).row.full-width.items-start.justify-center
       //- menu desktop
-      .col-xs-12.col-sm-12.col-md-4.row.justify-start.gt-sm
+      .col-xs-12.col-sm-12.col-md-3.row.justify-start.gt-sm
         div(style=`maxWidth: 320px; width: 100%`).justify-center.q-my-md
           div(style=`height: 50px;`).row.items-center
-            div(style=`` @click="$router.push(`/`)").row.neon_mini.items-center.cp
-              div(style=`width: 50px; height: 50px`).logo_menu.q-mr-xs
-              .col
-                div.neon_text
-                  span HACKATHON
-                .row
-                div.neon_text
-                  span BEST URFU 2019
-      .col-xs-12.col-sm-12.col-md-4.row.lt-md.row.justify-center
+            a(href="#first" v-smooth-scroll="{ duration: 1000, offset: -50, container: '' }" style=`text-decoration: none`).row.items-center.relative-position
+              div(style=`` @click="$router.push(`/`)").row.neon_mini.items-center.cp
+                div(style=`width: 50px; height: 50px`).logo_menu.q-mr-xs
+                .col
+                  div.neon_text
+                    span HACKATHON
+                  .row
+                  div.neon_text
+                    span BEST URFU 2019
+      .col-xs-12.col-sm-12.row.lt-md.row.justify-center
         div(style=`maxWidth: 320px; width: 100%`).q-pa-md
           .row.full-width.justify-start
             span(style=`font-size: 22px; color: #009992;`).text-bold Social
           .row.full-width.justify-start.q-gutter-sm.q-mt-md
-            div(href="" style=`width: 50px; height: 50px`).cp.vk2
-            div(href="" style=`width: 50px; height: 50px`).cp.inst
-            div(href="" style=`width: 50px; height: 50px`).cp.telegram
+            a(href="https://vk.com/hackathon_urfu")
+              div(style=`width: 50px; height: 50px`).cp.vk2
+            a(href="https://www.instagram.com/best_ekaterinburg_urfu/?igshid=3j2pl2ls0xpl")
+              div(style=`width: 50px; height: 50px`).cp.inst
+            a(href="https://tmgo.me/hackathon_urfu")
+              div(style=`width: 50px; height: 50px`).cp.telegram
+      .col-xs-12.col-sm-12.col-md-2.row.justify-center
+        div(style=`maxWidth: 320px; width: 100%`).q-pa-md
+          .row.full-width.justify-start
+            span(style=`font-size: 22px; color: #009992;`).text-bold Competitions
+          .row.full-width.justify-start.q-mt-md
+            a(href="https://best.eu.org/competitions/list.jsp").text-black Participate
+          .row.full-width.justify-start
+            a(href="https://ebec.best.eu.org/").text-black EBEC Website
+          .row.full-width.justify-start
+            a(href="https://best.eu.org/competitions/news.jsp").text-black News
       .col-xs-12.col-sm-12.col-md-2.row.row.justify-center
         div(style=`maxWidth: 320px; width: 100%`).q-pa-md
           .row.full-width.justify-start
@@ -58,14 +72,17 @@
             a(href="https://best.eu.org/aboutBEST/news.jsp").text-black Press
           .row.full-width.justify-start
             a(href="/contacts").text-black Support / Contuct Us
-      .col-xs-12.col-sm-12.col-md-4.row.gt-sm
-        div(style=`maxWidth: 320px; width: 100%`).q-pa-md
-          .row.full-width.justify-center
+      .col-xs-12.col-sm-12.col-md-3.row.gt-sm.justify-center
+        div(style=`maxWidth: 220px; width: 100%`).q-pa-md
+          .row.full-width.justify-start.q-gutter-sm
             span(style=`font-size: 22px; color: #009992;`).text-bold Social
-          .row.full-width.justify-end.q-gutter-sm.q-mt-md
-            div(href="" style=`width: 50px; height: 50px`).cp.vk2
-            div(href="" style=`width: 50px; height: 50px`).cp.inst
-            div(href="" style=`width: 50px; height: 50px`).cp.telegram
+          .row.full-width.justify-start.q-gutter-sm.q-mt-md
+            a(href="https://vk.com/hackathon_urfu")
+              div(style=`width: 50px; height: 50px`).cp.vk2
+            a(href="https://www.instagram.com/best_ekaterinburg_urfu/?igshid=3j2pl2ls0xpl")
+              div(style=`width: 50px; height: 50px`).cp.inst
+            a(href="https://tmgo.me/hackathon_urfu")
+              div(style=`width: 50px; height: 50px`).cp.telegram
       //- phone desktop
       // div(:style=`{ maxWidth:$q.screen.gt.sm ? '220px' : '460px', color: 'black' }`
       //   ).row.full-height.content-center.gt-sm
@@ -73,9 +90,9 @@
       //     span(style=`fontSize: 1.5rem; fontWeight: 500;`) {{ $store.state.main.config.info.phone }}
       //- toggle menu
     div(style=`font-size: 13px` @click="$router.push(`/`)").row.full-width.items-end.justify-end.bg-white.q-pb-md.q-pr-md.q-pt-xl.cp
-      span.text-black ©BEST URFU HACKATHON 2019
-      span.text-black // created by <a class="text-black" href="">OJV</a>
-    div(style=`height: 5px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643); `).row.full-width
+      span.text-black ©BEST URFU HACKATHON 2019 /
+      span.text-black / created by <a class="text-black" href="">OJV</a>
+    div(style=`height: 5px; background-image: linear-gradient(139deg, #00FFF3, #00E6DB, #00C1B9, #00A39A, #008680); `).row.full-width
     //- div(style=`font-size: 13px`).row.full-width.justify-center.bg-white
     //-   span.text-black created by <a href="">OJV</a>
     //- div(style=`font-size: 13px`).row.full-width.justify-center.bg-white

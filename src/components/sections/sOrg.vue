@@ -21,7 +21,7 @@
         div(data-aos="fade-up" data-aos-delay="600" style=`margin-top: calc(20px + (100 - 20) * ((100vw - 320px) / (1600 - 320)))`).row.full-width.justify-center.z
           div(style=`maxWidth: calc(50px + (250 - 50) * ((100vw - 320px) / (1600 - 320))); ; width: 100%; height: calc(50px + (250 - 50) * ((100vw - 320px) / (1600 - 320)));`).lamp
           .col
-            div(style=`height: 250px; padding-top: 30px`).row.content-center
+            div(style=`padding-top: 30px`).row.content-center
               span.z За 16 лет существования локальной группы мы ежегодно организуем <span class="yellow-highlight">мероприятия, направленные на развитие студентов.</span>
               span.z В прошлом году мы впервые провели IT-соревнование HACKATHON, в котором приняло участие <span class="yellow-highlight">100 человек.</span>
 </template>

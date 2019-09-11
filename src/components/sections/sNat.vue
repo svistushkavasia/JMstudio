@@ -18,18 +18,18 @@
             .row.full-width.items-center.q-py-xs
               div(style=`width: 50px; height: 50px`).vk
               .col
-                .row.fit.items-center.q-ml-md
+                a(href="https://vk.com/kulikova.nata").row.fit.items-center.q-ml-md.text-white
                   h5(style=`font-family: Russo One `) kulikova.nata
             .row.full-width.items-center.q-py-xs
               div(style=`width: 50px; height: 50px`).whats_app
               .col
                 .row.fit.items-center.q-ml-md
-                  h5(style=`font-family: Russo One `) WhatsApp, Viber, Telegram : +79120366056
+                  h5(style=`font-family: Russo One `) WhatsApp, Viber, Telegram : <a class="text-white" href="tel:+79120366056">+79120366056</a>
             .row.full-width.items-center.q-py-xs
               div(style=`width: 50px; height: 50px`).mail
               .col
                 .row.items-center.q-ml-md
-                  h5(style=`font-family: Russo One `) kulikova.natalia.job@gmail.com
+                  h5(style=`font-family: Russo One `) <a class="text-white" href="mailto:kulikova.natalia.job@gmail.com">kulikova.natalia.job@gmail.com</a>
 </template>
 <script>
 import AOS from 'aos'
