@@ -107,6 +107,7 @@ export default {
   },
   mounted () {
     this.$log('mounted')
+    // TODO: fuck yourself()
     this.$root.$on('toggleRightDrawer', (e) => {
       this.showRightDrawer = !this.showRightDrawer
     })
