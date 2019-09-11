@@ -3,6 +3,7 @@
     .row.full-width.justify-center
       //- ДАТЫ
       q-dialog(:maximized="true" position="bottom" ref="dialogReg")
+        //- ЕБАЛ В РОТ ГИТХАБ
         //- .row.window-width.window-height
           div(style=``).row.justify-center.full-width.bg-white.text-black
         div(style=`width: 100%; background-color: rgba(0, 153, 146, 0.5) ; padding: 0px 0px;`).row.justify-center.window-height.shadow-0
