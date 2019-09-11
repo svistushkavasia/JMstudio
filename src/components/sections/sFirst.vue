@@ -1,6 +1,6 @@
 <template lang="pug">
 .row.full-width.justify-center
-  div(:style=`{height: 'calc(100vh - 55px)',marginTop:$q.screen.gt.sm ? '0' : '0', width: '100%'}`).row.window-width.justify-center
+  div(:style=`{height: 'calc(100vh - 55px)',paddingTop:$q.screen.gt.sm ? '0' : '0', width: '100%'}`).row.window-width.justify-center
     div(style=`height: 0px; width: 100%; maxWidth: 1100px`).row.justify-center.z.self-center
       div().neon.row.justify-center
         .row
@@ -88,7 +88,7 @@
             span 1
             span 9
         //- .row.full-width.justify-center
-    div(style=`height: 100px; width: 100%; maxWidth: 1100px`).row.self-end.z
+    div(style=`height: 100px; width: 100%; maxWidth: 1100px`).row.self-end.z.q-mb-xl
       div(style=`height: 50px`).row.full-width.justify-center
         span(style=`height: 50px;font-size: 24px; text-shadow: 0 0 10px #009992, 0 0 10px #009992;`) OCTOBER 19-20
       div(style=`height: 50px;` class="hero__scroll").row.full-width.justify-center

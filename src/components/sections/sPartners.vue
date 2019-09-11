@@ -6,7 +6,7 @@
       //- карусель на партнеров
       .row.full-width.justify-center.q-my-xl
         div(data-aos="fade-up" style=`height: calc(100px + (250 - 100) * ((100vw - 320px) / (1600 - 320)));`).row.justify-center.items-center.bg-primary.full-width.q-px-md
-          swiper(data-aos="fade-up" data-aos-delay="500" data-swiper-autoplay="2000" :options="swiperOption").full-width
+          swiper(data-aos="fade" data-aos-delay="300" data-swiper-autoplay="2000" :options="swiperOption").full-width
             swiper-slide(v-for="(d, dd) in partners" :key="d.id" :style=`{marginRight: '50px', width: 'calc(200px + (300 - 200) * ((100vw - 320px) / (1600 - 320)))', height: 'calc(100px + (200 - 100) * ((100vw - 320px) / (1600 - 320)))', backgroundPosition: 'center',marginLeft: '0px', backgroundImage: 'url(' + d.image + ')'}`).nr.cp
             //- swiper-slide(:style=`{width: '100px', backgroundPosition: 'center', marginLeft: '0px', backgroundImage: 'url('statics/HuaweI.svg')'}`)
             //- swiper-slide(:style=`{width: '100px', backgroundPosition: 'center', marginLeft: '0px', backgroundImage: 'url('statics/Unilever.svg'')'}`)

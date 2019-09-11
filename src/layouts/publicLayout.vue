@@ -38,7 +38,7 @@
     q-header(:reveal-offset="500" style=`background: #fff; z-index: 2200;`)
       p-menu(style=`z-index: 1111`)
     q-page-container
-      vue-particles(
+      p-particles(
         color="#dedede"
         :particleOpacity="0.7"
         :particlesNumber="80"
@@ -64,9 +64,10 @@ import { routes } from 'components/config.js'
 import { openURL } from 'quasar'
 import pMenu from 'components/pMenu'
 import pFooter from 'components/pFooter'
+import pParticles from 'components/pParticles'
 export default {
   name: 'mainLayout',
-  components: { pMenu, pFooter },
+  components: { pMenu, pFooter, pParticles },
   meta () {
     return {
       title: this.siteName

@@ -86,7 +86,7 @@
             span(style=`color: #009992; font-size: 30px`) Повышение имиджа компании
           .row.full-width.justify-center
             .row.items-center
-              span(style=`font-size: 18px; margin-top: 40px; line-height: 25px`).text-justify Повышение <span class="yellow-highlight">имиджа компании</span> как организации с проектным подходом, с практиками технологического предпринимательства, а также <span class="yellow-highlight">повышение лояльности аудитории</span> к компании, как к социально-ответственному бизнесу, который поддерживает развитие <span class="yellow-highlight">некоммерческих и неполитических молодежных организаций.</span>
+              span(style=`font-size: 18px; margin-top: 40px; line-height: 25px`).text-justify Повышение <span class="yellow-highlight">имиджа компании,</span> как организации с проектным подходом, и практиками технологического предпринимательства, а также <span class="yellow-highlight">повышение лояльности аудитории</span> к компании, как к социально-ответственному бизнесу, который поддерживает развитие <span class="yellow-highlight">некоммерческих и неполитических молодежных организаций.</span>
         //- div(style=`maxWidth: 900px; width: 100%; height: 300px`).row.items-center.benefits_2
         //-   div(style=`maxWidth: 550px; font-size: 0.7em; height: 200px`)
         //-     .row.items-center.q-ml-md
