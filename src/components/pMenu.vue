@@ -1,23 +1,42 @@
 <template lang="pug">
   div(:style=`{height: '55px', zIndex: '111'}`).row.full-width.justify-center.z
     div(style=`maxWidth: 1300px; width: 100%; z-index: 111;`).row.full-width.items-center.justify-between
-      //- menu desktop
+      //- reg dialog
       q-dialog(:maximized="true" position="bottom" ref="dialogReg")
-        //- .row.window-width.window-height
-          div(style=``).row.justify-center.full-width.bg-white.text-black
-        div(style=`width: 100%; background-color: rgba(0, 153, 146, 0.5) ; padding: 0px 0px;`).row.justify-center.window-height.shadow-0
+        div(
+          @click="$refs.dialogReg.hide()"
+          :style=`{position: 'relative', backgroundColor: 'rgba(0, 153, 146, 0.5)'}`
+          ).row.full-width.window-height.items-start.content-start.justify-center.shadow-0
           div(style=`height: 55px`).row.full-width
-          div(data-aos="fade" data-aos-delay="2000" style=`transform: translate(-50%, -50%); z-index: 1; left: 50%; top: 50%; position: absolute; maxWidth: 600px; background-color: #fff; border-radius: 15px`).row.justify-center.full-width.q-py-sm
-            div(style=`maxWidth: 600px; width: 100%; margin-bottom: -50px;`).row.justify-end.title.text-black
-              q-btn(round flat icon="clear" color="primary" data-aos="fade" data-aos-delay="1000" @click="$refs.dialogReg.toggle()").q-ma-xs
-            .row.full-width.justify-center.content-center.q-mt-xl.q-mb-md
-              span(style=`font-size: 32px; font-family: Russo One; padding: 0`).text-black.text-center Регистрация на HACKATHON BEST URFU 2019
-              span(style=`font-size: 28px`).text-black.q-mt-md Спасибо за ответ на опрос
-              //- q-btn(data-aos="fade-up" data-aos-delay="400" label="Вернуться"
-              //- @click="$refs.dialogReg.toggle()" style=`font-size: 22px ;maxWidth: 250px; width:100%; height: 70px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);` push).row.z
-          div(style=`maxWidth: 720px; width: 100%; padding-right: 30px; padding-bottom: 0px;`).row.justify-end.title.q-px-sm.text-black
-            q-btn(round flat icon="clear" color="primary" data-aos="fade" data-aos-delay="1000" @click="$refs.dialogReg.toggle()").q-ma-xs.q-mr-sm
-          iframe(data-aos="fade-up" data-aos-delay="600" marginwidth="0" class="" marginheight="0" style=`z-index: 2; text-shadow: 50 50 5px #009992; margin: -50px 0px 0px 10px;` src="https://docs.google.com/forms/d/e/1FAIpQLSdnJA7i9NbjGVCgFt_uTdyUgwqbCxHdkVryNBR7HpAG7g_pGQ/viewform?embedded=true" width="100%" :height="$q.screen.gt.xs ? '2200' : '2700'" frameborder="0") Загрузка…
+          q-btn(
+            round color="primary" icon="clear" @click="$refs.dialogReg.hide()"
+            :style=`{position: 'fixed', zIndex: 10000, top: '50px', right: '50px'}`)
+          //- div(:style=`{width: '300px'}`).row.q-px-md
+          //-   .row.fit.bg-white
+          //-     span thnx
+          //- div(data-aos="fade" data-aos-delay="2000"
+          //-   style=`transform: translate(-50%, -50%); z-index: 1; left: 50%;
+          //-   top: 50%; position: absolute; maxWidth: 600px; background-color: #fff; border-radius: 15px`
+          //-   ).row.justify-center.full-width.q-py-sm
+          //-   div(style=`maxWidth: 600px; width: 100%; margin-bottom: -50px;`).row.justify-end.title.text-black
+          //-     q-btn(round flat icon="clear" color="primary" data-aos="fade" data-aos-delay="1000"
+          //-       @click="$refs.dialogReg.toggle()").q-ma-xs
+          //-   .row.full-width.justify-center.content-center.q-mt-xl.q-mb-md
+          //-     span(style=`font-size: 32px; font-family: Russo One; padding: 0`
+          //-       ).text-black.text-center Регистрация на HACKATHON BEST URFU 2019
+          //-     span(style=`font-size: 28px`).text-black.q-mt-md Спасибо за ответ на опрос
+          //- div(style=`maxWidth: 720px; width: 100%; padding-right: 30px; padding-bottom: 0px;`
+          //-   ).row.justify-end.title.q-px-sm.text-black
+          //-   q-btn(round flat icon="clear" color="primary" data-aos="fade" data-aos-delay="1000"
+          //-     @click="$refs.dialogReg.toggle()").q-ma-xs.q-mr-sm
+          //- :height="$q.screen.gt.xs ? '2200' : '2700'"
+          //- data-aos="fade-up" data-aos-delay="600"
+          iframe(
+            data-aos="fade-up" data-aos-delay="600"
+            :style=`{position: 'absolute', top: '0px', left: '0px', width: $q.screen.width+'px', height: '2700px'}`
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdnJA7i9NbjGVCgFt_uTdyUgwqbCxHdkVryNBR7HpAG7g_pGQ/viewform?embedded=true"
+            ) Загрузка…
+      //- page...
       div(style=`height: 50px;`).row.items-center
         a(href="#first" v-smooth-scroll="{ duration: 1000, offset: 50, container: '' }" style=`text-decoration: none`).row.items-center.relative-position
           div(style=``).row.neon_mini.items-center.cursor-pointer
@@ -95,9 +114,18 @@ export default {
     }
   },
   methods: {
+    fMessage (e) {
+      this.$log('fMessage', e)
+    },
     handleClick (path) {
       if (this.$route.path !== '/') this.$router.push('/')
     }
+  },
+  mounted () {
+    this.$log('mounted')
+    this.$root.$on('toggle_dialogReg', () => {
+      this.$refs.dialogReg.toggle()
+    })
   },
   created () {
     AOS.init()

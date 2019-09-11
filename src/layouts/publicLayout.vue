@@ -29,7 +29,7 @@
             q-btn(@click="$router.push('/faq')" label="Faq" style=`font-family: Russo One` v-ripple="{color: 'primary'}" size="lg" flat).q-ma-xs.menu_button.full-width
           div(style=``).row.items-center.relative-position.justify-center.q-mt-md
             q-btn(label="Регистрация"
-              @click="" flat style=`font-family: Russo One; maxWidth: 250px; width:100%; height: 50px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs
+              @click="regClick" flat style=`font-family: Russo One; maxWidth: 250px; width:100%; height: 50px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs
           //- div(style=`height: 50px`).row.full-width.items-center.content-center.q-pa-md
             q-btn(flat color="light-green-7" icon="perm_identity" style=`padding: 0px` @click="accountLogin" :loading="accountLoginLoading") войти в личный кабинет
         //- footer
@@ -90,6 +90,10 @@ export default {
     }
   },
   methods: {
+    regClick () {
+      this.$log('refClick')
+      this.$root.$emit('toggle_dialogReg')
+    },
     handleScroll (e) {
       // console.log(e.position)
       if (e.position > 190) this.blackMenu = true
