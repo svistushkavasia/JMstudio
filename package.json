@@ -8,7 +8,8 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev -m spa",
-    "build": "quasar build -m spa"
+    "build": "quasar build -m spa",
+    "now-build": "quasar build -m spa"
   },
   "dependencies": {
     "@quasar/app": "^1.0.0-rc.7",
