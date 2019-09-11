@@ -38,7 +38,7 @@
     q-header(:reveal-offset="500" style=`background: #fff; z-index: 2200;`)
       p-menu(style=`z-index: 1111`)
     q-page-container
-      vue-particles(
+      p-particles(
         color="#dedede"
         :particleOpacity="0.7"
         :particlesNumber="80"
