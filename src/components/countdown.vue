@@ -22,7 +22,7 @@ export default {
     return {
       timer: null,
       now: Date.now(),
-      deadline: Date.parse('October 26, 2019 10:00:00')
+      deadline: Date.parse('October 19, 2019 10:00:00')
     }
   },
   computed: {

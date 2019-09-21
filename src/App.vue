@@ -16,6 +16,35 @@ export default {
 <style lang="stylus">
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+.bg_motiv
+  background-image: url("~assets/bg_motiv.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+.motiv
+  background-image: url("~assets/motiv.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+.targem
+  background-image: url("~assets/targem.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+.tproger
+  background-image: url("~assets/tproger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+.megafon
+  background-image: url("~assets/megafon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+.naumen
+  background-image: url("~assets/naumen.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+.itevents
+  background-image: url("~assets/itevents.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 [data-aos="new-animation"] {
   opacity: 0;
   transition-property: transform, opacity;
