@@ -22,7 +22,7 @@
           h2(data-aos="fade-up" style=`color: #009992; text-shadow: 1px -1px 0px #fff`) Наш генеральный партнер
         .row.full-width.justify-center.q-my-xl
           div(data-aos="fade-up" data-aos-delay="100").col-md-6.col-sm-12.row.justify-center
-            div(style=`width: calc(200px + (450 - 200) * ((100vw - 320px) / (1600 - 320))); height: calc(100px + (200 - 100) * ((100vw - 320px) / (1600 - 320)))`)
+            div(style=`width: calc(200px + (350 - 200) * ((100vw - 320px) / (1600 - 320))); height: calc(100px + (180 - 100) * ((100vw - 320px) / (1600 - 320)))`)
               a(href="https://motivtelecom.ru/sverdlovsk_oblast/" style=`text-decoration: none`)
                 <svg width="100%" class="cls-1 cp grow" height="100%" viewBox="0 0 800 232" xmlns="http://www.w3.org/2000/svg">
                   <path d="M105.228 116.329C98.7579 92.1459 82.6029 62.301 66.2891 42.9062L36.7154 60.8423L56.2293 96.0821H0V136.566H56.2293L36.7154 171.801L66.2891 189.744C82.6029 170.35 98.7579 140.512 105.228 116.329Z"/>
