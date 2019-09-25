@@ -21,6 +21,21 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+.cls-1 {
+fill: #fff;
+}
+.cls-1:hover {
+fill: #FA6600;
+}
+.uralstudent
+  background-image: url("~assets/uralstudent.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+.motiv:hover
+  color: #FA6600;
 .motiv
   background-image: url("~assets/motiv.svg");
   background-repeat: no-repeat;
