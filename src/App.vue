@@ -36,6 +36,18 @@ fill: #FA6600;
   background-size: 100%;
 .motiv:hover
   color: #FA6600;
+.error
+  background-image: url("~assets/error.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+.ayteko
+  background-image: url("~assets/ayteko.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+.sberbank
+  background-image: url("~assets/sberbank.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 .motiv
   background-image: url("~assets/motiv.svg");
   background-repeat: no-repeat;

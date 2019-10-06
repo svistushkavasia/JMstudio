@@ -2,10 +2,20 @@
   div(:style=`{height: '55px', zIndex: '111'}`).row.full-width.justify-center.z
     div(style=`maxWidth: 1300px; width: 100%; z-index: 111;`).row.full-width.items-center.justify-between
       //- reg dialog
+      q-dialog(:maximized="true" position="bottom" ref="reg")
+        div(
+          @click="$refs.dialogReg.hide()"
+          :style=`{position: 'relative', backgroundColor: 'rgba(0, 0, 0, 0.7)'}`
+          ).row.full-width.window-height.items-start.content-start.justify-center.shadow-0
+          div(style=`height: 55px`).row.full-width
+          q-btn(
+            round color="primary" icon="clear" @click="$refs.reg.hide()"
+            :style=`{position: 'fixed', zIndex: 10000, top: '50px', right: '50px'}`)
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdc1RJV5jcZAdo53wU0D8hr7JqrWNOn5mHpHCjWceh75F4BSQ/viewform?embedded=true" width="640" height="767" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
       q-dialog(:maximized="true" position="bottom" ref="dialogReg")
         div(
           @click="$refs.dialogReg.hide()"
-          :style=`{position: 'relative', backgroundColor: 'rgba(0, 153, 146, 0.5)'}`
+          :style=`{position: 'relative', backgroundColor: 'rgba(0, 0, 0, 0.7)'}`
           ).row.full-width.window-height.items-start.content-start.justify-center.shadow-0
           div(style=`height: 55px`).row.full-width
           q-btn(
@@ -31,11 +41,11 @@
           //-     @click="$refs.dialogReg.toggle()").q-ma-xs.q-mr-sm
           //- :height="$q.screen.gt.xs ? '2200' : '2700'"
           //- data-aos="fade-up" data-aos-delay="600"
-          iframe(
-            data-aos="fade-up" data-aos-delay="600"
-            :style=`{position: 'absolute', top: '0px', left: '0px', width: $q.screen.width+'px', height: '2700px'}`
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdnJA7i9NbjGVCgFt_uTdyUgwqbCxHdkVryNBR7HpAG7g_pGQ/viewform?embedded=true"
-            ) Загрузка…
+          div(style=`maxWidth: 700px; padding-bottom: 50px; border-radius: 50px;`).row.justify-center.items-center
+            div(style=`width: 500px; height: 500px`).error
+            span(style=`margin: 0`).text-center Не придешь на хакатон? Не расстраивайся! У нас есть кое-что интересное для тебя. 20 октября с 10:00 до 19:00 в Технопарке пройдет ярмарка вакансий. На ней можно будет пообщаться с представителями 6 компаний, работающих в IT сфере. И даже пройти экспресс-собеседования! Участие бесплатное. Вход по регистрации.
+            q-btn(label="Участвовать"
+              @click="$refs.reg.show()" flat style=`font-size: 25px; font-family: Russo One; maxWidth: 250px; width:100%; height: 80px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs.q-my-md
       //- page...
       div(style=`height: 50px;`).row.items-center
         a(href="#first" v-smooth-scroll="{ duration: 1000, offset: 50, container: '' }" style=`text-decoration: none`).row.items-center.relative-position
@@ -125,6 +135,9 @@ export default {
     this.$log('mounted')
     this.$root.$on('toggle_dialogReg', () => {
       this.$refs.dialogReg.toggle()
+    })
+    this.$root.$on('toggle_reg', () => {
+      this.$refs.reg.toggle()
     })
   },
   created () {

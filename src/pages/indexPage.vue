@@ -8,7 +8,7 @@
       s-shedule(id="shedule" :style=`{order: 5}`)
       s-org(id="org" :style=`{order: 6}`)
       //- s-contacts(id="contacts" :style=`{order: 7}`)
-      s-partners(id="partners" :style=`{order: 8}`)
+      s-partners(id="partners" :style=`{order: 7}`)
 </template>
 
 <script>
