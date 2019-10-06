@@ -2,23 +2,50 @@
   .row.full-width
     .row.full-width.justify-center
       //- ДАТЫ
-      q-dialog(:maximized="true" position="bottom" ref="dialogReg")
-        //- ЕБАЛ В РОТ ГИТХАБ
-        //- .row.window-width.window-height
-          div(style=``).row.justify-center.full-width.bg-white.text-black
-        div(style=`width: 100%; background-color: rgba(0, 153, 146, 0.5) ; padding: 0px 0px;`).row.justify-center.window-height.shadow-0
+      q-dialog(:maximized="true" position="bottom" ref="reg")
+        div(
+          @click="$refs.dialogReg.hide()"
+          :style=`{position: 'relative', backgroundColor: 'rgba(0, 0, 0, 0.7)'}`
+          ).row.full-width.window-height.items-start.content-start.justify-center.shadow-0
           div(style=`height: 55px`).row.full-width
-          div(data-aos="fade" data-aos-delay="2000" style=`transform: translate(-50%, -50%); z-index: 1; left: 50%; top: 50%; position: absolute; maxWidth: 600px; background-color: #fff; border-radius: 15px`).row.justify-center.full-width.q-py-sm
-            div(style=`maxWidth: 600px; width: 100%; margin-bottom: -50px;`).row.justify-end.title.text-black
-              q-btn(round flat icon="clear" color="primary" data-aos="fade" data-aos-delay="1000" @click="$refs.dialogReg.toggle()").q-ma-xs
-            .row.full-width.justify-center.content-center.q-mt-xl.q-mb-md
-              span(style=`font-size: 32px; font-family: Russo One; padding: 0`).text-black.text-center Регистрация на HACKATHON BEST URFU 2019
-              span(style=`font-size: 28px`).text-black.q-mt-md Спасибо за ответ на опрос
-              //- q-btn(data-aos="fade-up" data-aos-delay="400" label="Вернуться"
-              //- @click="$refs.dialogReg.toggle()" style=`font-size: 22px ;maxWidth: 250px; width:100%; height: 70px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);` push).row.z
-          div(style=`maxWidth: 720px; width: 100%; padding-right: 30px; padding-bottom: 0px;`).row.justify-end.title.q-px-sm.text-black
-            q-btn(round flat icon="clear" color="primary" data-aos="fade" data-aos-delay="1000" @click="$refs.dialogReg.toggle()").q-ma-xs.q-mr-sm
-          iframe(data-aos="fade-up" data-aos-delay="600" marginwidth="0" class="" marginheight="0" style=`z-index: 2; text-shadow: 50 50 5px #009992; margin: -50px 0px 0px 10px;` src="https://docs.google.com/forms/d/e/1FAIpQLSdnJA7i9NbjGVCgFt_uTdyUgwqbCxHdkVryNBR7HpAG7g_pGQ/viewform?embedded=true" width="100%" :height="$q.screen.gt.xs ? '2200' : '2700'" frameborder="0") Загрузка…
+          q-btn(
+            round color="primary" icon="clear" @click="$refs.reg.hide()"
+            :style=`{position: 'fixed', zIndex: 10000, top: '50px', right: '50px'}`)
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdc1RJV5jcZAdo53wU0D8hr7JqrWNOn5mHpHCjWceh75F4BSQ/viewform?embedded=true" width="640" height="767" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+      q-dialog(:maximized="true" position="bottom" ref="dialogReg")
+        div(
+          @click="$refs.dialogReg.hide()"
+          :style=`{position: 'relative', backgroundColor: 'rgba(0, 0, 0, 0.7)'}`
+          ).row.full-width.window-height.items-start.content-start.justify-center.shadow-0
+          div(style=`height: 55px`).row.full-width
+          q-btn(
+            round color="primary" icon="clear" @click="$refs.dialogReg.hide()"
+            :style=`{position: 'fixed', zIndex: 10000, top: '50px', right: '50px'}`)
+          //- div(:style=`{width: '300px'}`).row.q-px-md
+          //-   .row.fit.bg-white
+          //-     span thnx
+          //- div(data-aos="fade" data-aos-delay="2000"
+          //-   style=`transform: translate(-50%, -50%); z-index: 1; left: 50%;
+          //-   top: 50%; position: absolute; maxWidth: 600px; background-color: #fff; border-radius: 15px`
+          //-   ).row.justify-center.full-width.q-py-sm
+          //-   div(style=`maxWidth: 600px; width: 100%; margin-bottom: -50px;`).row.justify-end.title.text-black
+          //-     q-btn(round flat icon="clear" color="primary" data-aos="fade" data-aos-delay="1000"
+          //-       @click="$refs.dialogReg.toggle()").q-ma-xs
+          //-   .row.full-width.justify-center.content-center.q-mt-xl.q-mb-md
+          //-     span(style=`font-size: 32px; font-family: Russo One; padding: 0`
+          //-       ).text-black.text-center Регистрация на HACKATHON BEST URFU 2019
+          //-     span(style=`font-size: 28px`).text-black.q-mt-md Спасибо за ответ на опрос
+          //- div(style=`maxWidth: 720px; width: 100%; padding-right: 30px; padding-bottom: 0px;`
+          //-   ).row.justify-end.title.q-px-sm.text-black
+          //-   q-btn(round flat icon="clear" color="primary" data-aos="fade" data-aos-delay="1000"
+          //-     @click="$refs.dialogReg.toggle()").q-ma-xs.q-mr-sm
+          //- :height="$q.screen.gt.xs ? '2200' : '2700'"
+          //- data-aos="fade-up" data-aos-delay="600"
+          div(style=`maxWidth: 700px; padding-bottom: 50px; border-radius: 50px;`).row.justify-center.items-center
+            div(style=`width: 500px; height: 500px`).error
+            span(style=`margin: 0`).text-center Не придешь на хакатон? Не расстраивайся! У нас есть кое-что интересное для тебя. 20 октября с 10:00 до 19:00 в Технопарке пройдет ярмарка вакансий. На ней можно будет пообщаться с представителями 6 компаний, работающих в IT сфере. И даже пройти экспресс-собеседования! Участие бесплатное. Вход по регистрации.
+            q-btn(label="Участвовать"
+              @click="$refs.reg.show()" flat style=`font-size: 25px; font-family: Russo One; maxWidth: 250px; width:100%; height: 80px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs.q-my-md
       .row.full-width.justify-center
         h2(data-aos="fade-up" style=`color: #009992; text-shadow: 1px -1px 0px #fff; z-index: 100`).q-my-xl До мероприятия осталось
       //- выравнивание по центру
