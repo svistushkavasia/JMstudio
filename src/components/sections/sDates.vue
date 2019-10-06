@@ -42,8 +42,8 @@
           //- :height="$q.screen.gt.xs ? '2200' : '2700'"
           //- data-aos="fade-up" data-aos-delay="600"
           div(style=`maxWidth: 700px; padding-bottom: 50px; border-radius: 50px;`).row.justify-center.items-center
-            div(style=`width: 500px; height: 500px`).error
-            span(style=`margin: 0`).text-center Не придешь на хакатон? Не расстраивайся! У нас есть кое-что интересное для тебя. 20 октября с 10:00 до 19:00 в Технопарке пройдет ярмарка вакансий. На ней можно будет пообщаться с представителями 6 компаний, работающих в IT сфере. И даже пройти экспресс-собеседования! Участие бесплатное. Вход по регистрации.
+            div(style=`maxWidth: 500px; height: calc(200px + (500 - 300) * ((100vw - 320px) / (1600 - 320)))`).error.full-width
+            span(style=`margin: 0`).text-center.q-px-md Не придешь на хакатон? Не расстраивайся! У нас есть кое-что интересное для тебя. 20 октября с 10:00 до 19:00 в Технопарке пройдет ярмарка вакансий. На ней можно будет пообщаться с представителями 6 компаний, работающих в IT сфере. И даже пройти экспресс-собеседования! Участие бесплатное. Вход по регистрации.
             q-btn(label="Участвовать"
               @click="$refs.reg.show()" flat style=`font-size: 25px; font-family: Russo One; maxWidth: 250px; width:100%; height: 80px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs.q-my-md
       .row.full-width.justify-center
