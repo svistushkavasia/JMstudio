@@ -207,7 +207,7 @@
           h5.text-center Итак, ты выбрал направление и уже хочешь скорее провести 24 часа, выполняя интересные задания и соревнуясь с другими студентами города?
       .row.full-width.justify-center.q-mb-xl.q-px-md
         h5(data-aos="fade-up" data-aos-delay="300").z.text-center Дело за малым — собирай команду и регистрируйся.
-      .row.full-width.justify-center.q-my-xl
+      //- .row.full-width.justify-center.q-my-xl
         q-btn(data-aos="fade-up" data-aos-delay="400" label="Регистрация"
               @click="$refs.dialogReg.show()" style=`font-size: 22px ;maxWidth: 250px; width:100%; height: 70px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);` push).row.z
       div(data-aos="fade-up" data-aos-delay="400" style=`width: 1100px`).row.justify-center.q-my-xl.z.q-px-md

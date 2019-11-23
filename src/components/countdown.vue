@@ -1,16 +1,16 @@
 <template lang="pug">
 div.row.items-start.justify-between.q-mb-xl
   .block
-    p.digit.row.items-center.justify-center {{days | two_digits}}
+    p.digit.row.items-center.justify-center 0
     p.text Дней
   .block
-    p.digit.row.items-center.justify-center {{hours | two_digits}}
+    p.digit.row.items-center.justify-center 0
     p.text Часов
   .block
-    p.digit.row.items-center.justify-center {{minutes | two_digits}}
+    p.digit.row.items-center.justify-center 0
     p.text Минут
   .block
-    p.digit.row.items-center.justify-center {{seconds | two_digits}}
+    p.digit.row.items-center.justify-center 0
     p().text Секунд
 </template>
 
@@ -22,7 +22,7 @@ export default {
     return {
       timer: null,
       now: Date.now(),
-      deadline: Date.parse('October 19, 2019 10:00:00')
+      deadline: Date.parse('00:00:00')
     }
   },
   computed: {

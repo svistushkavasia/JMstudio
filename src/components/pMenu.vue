@@ -91,9 +91,9 @@
             q-btn(@click="$router.push('/partners')" label="Партнерам" style=`font-family: Russo One` v-ripple="{color: 'primary'}" size="md" flat).q-my-xs.menu_button
           .row.items-center.relative-position
             q-btn(@click="$router.push('/faq')" label="Faq" style=`font-family: Russo One` v-ripple="{color: 'primary'}" size="md" flat).q-my-xs.menu_button
-          .row.items-center.relative-position
+          //- .row.items-center.relative-position
             q-btn(label="Регистрация"
-              @click="$refs.dialogReg.show()" flat style=`font-family: Russo One; maxWidth: 250px; width:100%; height: 40px; border-radius: 50px; background-image: linear-gradient(139deg, #00FFF3, #00D2C9, #009992, #00706A, #004643);`).q-ma-xs
+              @click="$refs.dialogReg.show()" flat style=`font-family: Russo One; maxWidth: 250px; width:100%; height: 40px; border-radius: 50px; background-image: linear-gradient(139deg, #FAC060, #FF7A00);`).q-ma-xs
       //- phone desktop
       // div(:style=`{ maxWidth:$q.screen.gt.sm ? '220px' : '460px', color: 'black' }`
       //   ).row.full-height.content-center.gt-sm
