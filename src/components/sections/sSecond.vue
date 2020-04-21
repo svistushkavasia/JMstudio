@@ -1,361 +1,178 @@
 <template lang="pug">
-.row.full-width
-  div(style=`minHeight: 700px; box-shadow: 0 0px 700px #009992; z-index: 100`).row.full-width.justify-center.bg-black
-    div(:style=`{maxWidth: ''}`).row.full-width.items-start.justify-center
-      .row.full-width.justify-center
+.row.full-width.justify-center.all_bg
+  .row.full-width.justify-center
+    q-dialog(ref="callback" :maximized="$q.screen.lt.sm")
+      div(style=`maxWidth: 400px; border-radius: 10px`).column.full-width.justify-start.bg-white.text-black.q-py-sm
+        .row.full-width.justify-center.items-center.q-px-md
+          span.text-subtitle.text-bold Заказать обратный звонок
+          .col
+          q-btn(round flat icon="clear" color="black" @click="$refs.callback.hide()")
+        .row.full-width.justify-start.items-start.q-px-md
+        .row.full-width.justify-center.q-mt-lg.q-px-md
+          span.text-subtitle2 Перезвоним вам в течении 5 минут!
+        .row.full-width.justify-center.q-mt-md.q-px-md
+          q-input(v-model="name" stack-label label="Имя" filled).full-width.q-mb-md
+          q-input(v-model="phone" unmasked-value mask="(###)-###-##-##" stack-label label="Телефон" prefix="+7" filled).full-width.q-mb-md
+        .row.full-width.justify-center.q-px-md
+          q-btn(outline style=`border-radius: 0px; border: 3px solid #000; font-size: 20px` @click="" label="Заказать звонок" ).row.full-width
+        .row.full-width.justify-center.q-mt-md.q-px-md
+          span(style=`font-size: 9px`).text-grey Нажимая на кнопку "Заказать звонок!", я даю свое согласие на обработку персональных данных.
+    q-dialog(ref="service_1" :maximized="$q.screen.lt.sm")
+      div(style=`maxWidth: 900px; minHeight: 400px`).column.full-width.items-start.justify-start.bg-white.q-px-md
         div(style=``).row.full-width.justify-center
-          h2(data-aos="fade-up" style=`color: #009992; text-shadow: 1px -1px 0px #fff`) Что такое HACKATHON?
-        //- выравнивание элемента по центру
-        .row.full-width.justify-center.q-my-xs.lt-sm
-          //- ХЕКСАГОНЫ
-          div(style=`padding-right: 30px`).row.q-my-md
-            //- ЛЕВЫЙ СТОЛБЕЦ
-            div(data-aos="fade-up").hex2.stroke
-              //- темно зеленый
-              .hex2.row
-                .hex2.top.green
-                .hex2.middle.green
-                  span(style=`margin: 0px 0px; font-size: 10px; position: absolute; width: 90px; margin-left: -17px; margin-top: 10px`).text-center.text-white Хочешь испытать свои силы в решении реальной проблемы
-                .hex2.bottom.green
-              //- зеленый
-              .hex2.row
-                .hex2.top.lightgreen
-                .hex2.middle.lightgreen
-                  span(style=`margin: 0px 0px; font-size: 10px; position: absolute; width: 90px; margin-left: -17px; margin-top: 25px`).text-center.text-white Желаешь бросить себе вызов
-                .hex2.bottom.lightgreen
-            //- СРЕДНИЙ СТОЛБЕЦ
-            .hex2.middle.stroke
-              //- белый
-              div(data-aos="fade-down").hex2.row
-                .hex2.top.white
-                .hex2.middle.white.row.justify-center.items-center
-                  h5.text-black Ты:
-                .hex2.bottom.white
-              //- черный
-              .hex2.black.row
-                .hex2.top.black
-                .hex2.middle.black
-                .hex2.bottom.black
-              //- темно зеленый
-              div(data-aos="fade-up").hex2.row
-                .hex2.top.green
-                .hex2.middle.green
-                  span(style=`margin: 0px 0px; font-size: 10px; position: absolute; width: 90px; margin-left: -17px; margin-top: 35px`).text-center.text-white Умеешь работать в команде
-                .hex2.bottom.green
-            //- ПРАВЫЙ СТОЛБЕЦ
-            div(data-aos="fade-up").hex2.stroke
-              //- темно зеленый
-              .hex2.row
-                .hex2.top.green
-                .hex2.middle.green
-                  span(style=`margin: 0px 0px; font-size: 10px; position: absolute; width: 90px; margin-left: -17px; margin-top: 30px`).text-center.text-white Студент из Екатеринбурга
-                .hex2.bottom.green
-              //- зеленый
-              .hex2.row
-                .hex2.top.lightgreen
-                .hex2.middle.lightgreen
-                  span(style=`margin: 0px 0px; font-size: 10px; position: absolute; width: 90px; margin-left: -17px; margin-top: 25px`).text-center.text-white Увлекаешься программиро- ванием
-                .hex2.bottom.lightgreen
-        //- div(style=``).row.justify-center.br.gt-xs
-        //-   //- .clipper.br.row.justify-center
-        //-   //- .clipper.row.full-width.justify-center
-        //-     .shape3.row.justify-center.br
-        //-       .shape4.br
-        //-       //- .shape
-        //-   .row.window-height.window-width.justify-center
-        //-     div(style=`width: 400px; height: 400px; position: relative`).box
-        //-       span
-        //-       span
-        //-       span
-        //-       span
-        .row.full-width.justify-center.q-my-xs.gt-xs
-          div(style=`padding-right: 60px`).row.q-my-md
-            //- ЛЕВЫЙ СТОЛБЕЦ
-            div(data-aos="fade-right").hex.stroke
-              //- темно зеленый
-              .hex
-                .hex.top.green
-                .hex.middle.green
-                  span(style=`margin: 0px 0px; font-size: 20px; position: absolute; width: 180px; margin-left: -37px; margin-top: 15px`).text-center.text-white Хочешь испытать свои силы в решении реальной проблемы
-                .hex.bottom.green
-              //- зеленый
-              .hex
-                .hex.top.lightgreen
-                .hex.middle.lightgreen
-                  span(style=`margin: 0px 0px; font-size: 20px; position: absolute; width: 150px; margin-left: -23px; margin-top: 45px`).text-center.text-white Желаешь бросить себе вызов
-                .hex.bottom.lightgreen
-            //- СРЕДНИЙ СТОЛБЕЦ
-            .hex.middle.stroke
-              //- белый
-              div(data-aos="fade-down").hex
-                .hex.top.white
-                .hex.middle.white.row.justify-center.items-center
-                  h3.text-black Ты:
-                .hex.bottom.white
-              //- черный
-              .hex.black
-                .hex.top.black
-                .hex.middle.black
-                .hex.bottom.black
-              //- темно зеленый
-              div(data-aos="fade-up").hex
-                .hex.top.green
-                .hex.middle.green
-                  span(style=`margin: 0px 0px; font-size: 20px; position: absolute; width: 150px; margin-left: -23px; margin-top: 45px`).text-center.text-white Умеешь работать в команде
-                .hex.bottom.green
-            //- ПРАВЫЙ СТОЛБЕЦ
-            div(data-aos="fade-left").hex.stroke
-              //- темно зеленый
-              .hex
-                .hex.top.green
-                .hex.middle.green
-                  span(style=`margin: 0px 0px; font-size: 20px; position: absolute; width: 150px; margin-left: -23px; margin-top: 55px`).text-center.text-white Студент из Екатеринбурга
-                .hex.bottom.green
-              //- зеленый
-              .hex
-                .hex.top.lightgreen
-                .hex.middle.lightgreen
-                  span(style=`margin: 0px 0px; font-size: 20px; position: absolute; width: 150px; margin-left: -23px; margin-top: 45px`).text-center.text-white Увлекаешься программиро- ванием
-                .hex.bottom.lightgreen
-      div(style=`maxWidth: 800px; width: 100%; font-family: Russo One; z-index: 100`).row.justify-center.q-px-md.q-my-xl
-          div(data-aos="fade-right" style=`width: 130px; height: 130px; background: #009992;`).row.q-mr-md.gt-xs
-            div(style=`font-size: 24px; `).row.full-width.justify-center
-              .row.full-width.justify-center.q-pt-xs
-                span.self-start 19-20
-              .row.full-width.justify-center
-                span.self-center OCTOBER
-              .row.full-width.justify-center.q-pb-xs
-                span.self-end 2019
-          div(data-aos="fade-up" style=`width: 85px; height: 85px; background: #009992;`).row.q-mr-md.lt-sm
-            div(style=`font-size: 12px; font-family: Russo One;`).row.full-width.justify-center
-              .row.full-width.justify-center
-                span.self-end 19-20
-                span.self-start OCTOBER
-              .row.full-width.justify-center
-                span.self-end 2019
-          div(data-aos="fade-left" style=`font-size: 18px;`).col.text-justify.q-mb-xl.gt-xs
-            span(style=`z-index: 100; font-family: Roboto Slab;
-                        font-style: normal;
-                        font-weight: bold;
-                        color: #FFFFFF;`) Ты на сайте IT-мероприятия HACKATHON BEST UrFU 2019, которое пройдет 19-20 октября в Екатеринбурге.<br /> Наш HACKATHON — это марафон программирования, на котором тебе нужно будет устроить настоящий мозговой штурм, чтобы за 24 часа справиться с заданием от IT-компаний города.
-          div(data-aos="fade-up" style=`font-size: 10px;`).col.text-justify.q-mb-xs.lt-sm.q-px-xs
-            span(style=`z-index: 100; font-family: Roboto Slab;
-                        font-style: normal;
-                        font-weight: bold;
-                        color: #FFFFFF;`) Ты на сайте IT-мероприятия HACKATHON BEST UrFU 2019, которое пройдет 19-20 октября в Екатеринбурге.<br />Наш HACKATHON — это марафон программирования, на котором тебе нужно будет устроить настоящий мозговой штурм, чтобы за 24 часа справиться с заданием от IT-компаний города.
+          div(style=``).row.full-width.justify-end
+            q-btn(round flat icon="clear" style=`position: absolute` color="primary" @click="$refs.service_1.hide()").q-ma-xs
+          div(style=`height: 80px; width: 150px`).row.jm.q-mt-md
+        div(style=`maxWidth: 400px`).row.full-width.justify-center.text-black.q-mt-xl
+          span Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+    q-dialog(ref="service_2" :maximized="$q.screen.lt.sm")
+      div(style=`maxWidth: 900px; minHeight: 400px`).column.full-width.items-start.justify-start.bg-white.q-px-md
+        div(style=``).row.full-width.justify-center
+          div(style=``).row.full-width.justify-end
+            q-btn(round flat icon="clear" style=`position: absolute` color="primary" @click="$refs.service_2.hide()").q-ma-xs
+          div(style=`height: 80px; width: 150px`).row.jm.q-mt-md
+        .row.full-width.justify-center
+          div(style=`maxWidth: 400px`).row.full-width
+          div(style=`maxWidth: 400px`).row.justify-center.text-black.q-mt-xl
+            span Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+    q-dialog(ref="service_3" :maximized="$q.screen.lt.sm")
+      div(style=`maxWidth: 900px; minHeight: 400px`).column.full-width.items-start.justify-start.bg-white.q-px-md
+        div(style=``).row.full-width.justify-center
+          div(style=``).row.full-width.justify-end
+            q-btn(round flat icon="clear" style=`position: absolute` color="primary" @click="$refs.service_3.hide()").q-ma-xs
+          div(style=`height: 80px; width: 150px`).row.jm.q-mt-md
+        div(style=`maxWidth: 400px`).row.full-width.justify-center.text-black.q-mt-xl
+          span Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+    q-dialog(ref="service_4" :maximized="$q.screen.lt.sm")
+      div(style=`maxWidth: 900px; minHeight: 400px`).column.full-width.items-start.justify-start.bg-white.q-px-md
+        div(style=``).row.full-width.justify-center
+          div(style=``).row.full-width.justify-end
+            q-btn(round flat icon="clear" style=`position: absolute` color="primary" @click="$refs.service_4.hide()").q-ma-xs
+          div(style=`height: 80px; width: 150px`).row.jm.q-mt-md
+        .row.full-width.justify-center
+          div(style=`maxWidth: 400px`).row.full-width
+          div(style=`maxWidth: 400px`).row.justify-center.text-black.q-mt-xl
+            span Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+    q-dialog(ref="service_5" :maximized="$q.screen.lt.sm")
+      div(style=`maxWidth: 900px; minHeight: 400px`).column.full-width.items-start.justify-start.bg-white.q-px-md
+        div(style=``).row.full-width.justify-center
+          div(style=``).row.full-width.justify-end
+            q-btn(round flat icon="clear" style=`position: absolute` color="primary" @click="$refs.service_5.hide()").q-ma-xs
+          div(style=`height: 80px; width: 150px`).row.jm.q-mt-md
+        div(style=`maxWidth: 400px`).row.full-width.justify-center.text-black.q-mt-xl
+          span Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+    div(style=`maxWidth: 1100px`).row.full-width.justify-center.q-py-xl
+      .row.full-wudth.justify-center.q-mt-xl
+        span.text-h4.text-black.text-center УСЛУГИ
+      .row.full-width.justify-center.q-mt-md
+        div(style=`height: 50px; width: 100px`).row.jm
+      .row.full-width.justify-center.q-mt-xl.q-px-md
+        div(style=`maxWidth: 900px; height: 200px`).row.full-width.justify-center.items-center.service_1.shadow-5.q-px-lg
+          .col
+            div(style=`height: 150px; width: 150px`).micro.gt-sm
+            div(style=`height: 100px; width: 100px`).micro.lt-md
+          .row.full-width
+            .row.full-width.justify-end
+              span.text-h4.gt-sm Готовая песня
+              span.text-h6.lt-md Готовая песня
+            .row.full-width.justify-end.q-mt-sm
+              q-btn(outline style=`maxWidth: 230px; border-radius: 0px; border: 3px solid #fff; font-size: 20px` @click="$refs.callback.show()" label="Записать трек" color="white").row.full-width.gt-sm
+              q-btn(outline style=`maxWidth: 150px; border-radius: 0px; border: 2px solid #fff; font-size: 10px` @click="$refs.callback.show()" label="Записать трек" color="white").row.full-width.lt-md.self-end
+      .row.full-width.justify-center.q-mt-md.q-px-md.text-subtitle2.lt-md
+        div(style=`height: 200px` @click="$refs.service_1.show()").row.full-width.service_2.shadow-5.q-pa-sm.items-end.cp.grow-shadow
+          span Почасовая запись
+        div(style=`height: 200px` @click="$refs.service_2.show()").row.full-width.service_3.shadow-5.q-pa-sm.items-end.cp.grow-shadow.q-mt-md
+          span Сведение и мастеринг
+        div(style=`height: 200px` @click="$refs.service_3.show()").row.full-width.service_4.shadow-5.q-pa-sm.items-end.cp.grow-shadow.q-mt-md
+          span Минус на заказ
+        div(style=`height: 200px` @click="$refs.service_4.show()").row.full-width.service_5.shadow-5.q-pa-sm.items-end.cp.grow-shadow.q-mt-md
+          span Озвучка видеороликов
+      .row.full-width.justify-center.q-mt-md.q-px-md.text-subtitle2.gt-sm
+        div(style=`width: 210px; margin-right: 20px; height: 200px` @click="$refs.service_2.show()").row.service_2.shadow-5.q-pa-sm.items-end.cp.grow-shadow
+          span Почасовая запись
+        div(style=`width: 210px; margin-right: 20px; height: 200px` @click="$refs.service_2.show()").row.service_3.shadow-5.q-pa-sm.items-end.cp.grow-shadow
+          span Сведение и мастеринг
+        div(style=`width: 210px; margin-right: 20px; height: 200px` @click="$refs.service_3.show()").row.service_4.shadow-5.q-pa-sm.items-end.cp.grow-shadow
+          span Минус на заказ
+        div(style=`width: 210px; height: 200px` @click="$refs.service_4.show()").row.service_5.shadow-5.q-pa-sm.items-end.cp.grow-shadow
+          span Озвучка видеороликов
+      .row.full-width.justify-center.q-mt-md.q-px-md
+        div(style=`maxWidth: 900px; height: 200px` @click="$refs.service_5.show()").row.full-width.justify-center.items-center.service_6.shadow-5.q-px-lg.cp.grow-shadow
+          span.text-h4 Аудиореклама
 </template>
 <script>
-import AOS from 'aos'
 export default {
   name: 'sSecond',
-  components: { AOS },
+  components: { },
   data () {
     return {
+      form: {
+        phone: '',
+        name: ''
+      }
+    }
+  },
+  methods: {
+    service1 () {
+      this.$refs.service_1.show()
     }
   },
   created () {
-    AOS.init()
   }
 }
 </script>
 <style lang="stylus">
-.box:before{
-  content: '';
-  // position:absolute;
-  top:0;
-  left: -100%;
-  width:100%;
-  height:100%;
-  background: rgba(255,255,255,0.1);
-  transition:0.5s;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css?family=Rufina&display=swap');
+.grow-shadow {
+  -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
 }
-.box:hover:before{
-  left:-50%;
-  transform: skewX(-5deg);
+.grow-shadow:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+      transform: scale(1.1);
+  box-shadow: 1px 1px 10px #000;
 }
-.box.content{
-  position:absolute;
-  top:15px;
-  left:15px;
-  right:15px;
-  bottom:15px;
-  border:1px solid #f0a591;
-  padding:20px;
-  text-align:center;
-  box-shadow: 0 5px 10px rgba(9,0,0,0.5);
-}
-.box span{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  box-sizing: border-box;
-}
-.box span:nth-child(1)
-{
-  transform:rotate(0deg);
-}
-.box span:nth-child(2)
-{
-  transform:rotate(90deg);
-}
-.box span:nth-child(3)
-{
-  transform:rotate(180deg);
-}
-.box span:nth-child(4)
-{
-  transform:rotate(270deg);
-}
-.box span:before
-{
-  content: '';
-  position: absolute;
-  width:100%;
-  height: 2px;
-  background: #50dfdb;
-  animation: animate 4s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-  transform:scaleX(0);
-  transform-origin: left;
-  }
-  50%
-  {
-    transform:scaleX(1);
-  transform-origin: left;
-  }
-  50.1%
-  {
-    transform:scaleX(1);
-  transform-origin: right;
-  }
-  100%
-  {
-    transform:scaleX(0);
-  transform-origin: right;
-  }
-}
-// .shape{
-//  border-radius: 90px;
-//  width: 95px;
-//  height: 70px;
-//  margin-top: 0px
-// //  border: 4px solid white;
-// overflow:hidden
-// background: #000
-// }
-// .shape2{
-//  border-radius: 20000px;
-//  width: 20000px;
-//  height: 20000px;
-//  margin-top: -19800px
-// //  border: 4px solid white;
-// background: #fff
-// }
-.clipper {
- width: 1000px;
- height: 150px;
- border-radius: 400px;
- overflow:hidden
-}
-.shape2 {
-  margin: 0 auto;
-  width: 7em; height:9em;
-  /* WebKit browsers, old syntax */
-  background: -webkit-radial-gradient(50% 0, circle, transparent 70%, white 30%);
-  border-radius: 200px;
-  /* IE10, current versions of Firefox and Opera */
-  background: radial-gradient(circle at 50% 0, transparent 60%, white 30%);
-}
-.shape3{
-  width: 600px;
-  height: 500px;
-  border-radius: 500px;
-  background-color: #fff;
-  transform: rotateX(86deg);
-  position: absolute;
-  margin-top: -150px
-}
-.shape4{
-  width: 600px;
-  height: 450px;
-  border-radius: 500px;
-  background-color: #000;
-  transform: rotateX(0deg);
-  margin-top: 0px;
-  // position: absolute
-}
-.hex2.middle.stroke
-  clear: left;
-  margin-top: 0px
-.hex2.stroke
-  clear: left;
-  margin-right: -32.2px;
-  margin-top: 48.3px;
-.hex2.top.lightgreen
-  float: left;
-  border-right: 32.2px solid #5BA4A1;
-  border-top: 48.3px solid transparent;
-  border-bottom: 48.3px solid transparent;
-.hex2.middle.lightgreen
-  float: left;
-  width: 54.6px;
-  height: 96.6px;
-  background-color: #5BA4A1;
-.hex2.bottom.lightgreen
-  float: left;
-  border-left: 32.2px solid #5BA4A1;
-  border-top: 48.3px solid transparent;
-  border-bottom: 48.3px solid transparent;
-.hex2.top.black
-  float: left;
-  border-right: 32.2px solid #000;
-  border-top: 48.3px solid transparent;
-  border-bottom: 48.3px solid transparent;
-.hex2.middle.black
-  float: left;
-  width: 54.6px;
-  height: 96.6px;
-  background-color: #000;
-.hex2.bottom.black
-  float: left;
-  border-left: 32.2px solid #000;
-  border-top: 48.3px solid transparent;
-  border-bottom: 48.3px solid transparent;
-.hex2.top.white
-  float: left;
-  border-right: 32.2px solid #fff;
-  border-top: 48.3px solid transparent;
-  border-bottom: 48.3px solid transparent;
-.hex2.middle.white
-  float: left;
-  width: 54.6px;
-  height: 96.6px;
-  background-color: #fff;
-.hex2.bottom.white
-  float: left;
-  border-left: 32.2px solid #fff;
-  border-top: 48.3px solid transparent;
-  border-bottom: 48.3px solid transparent;
-.hex2.top.green
-  float: left;
-  border-right: 32.2px solid #103F3D;
-  border-top: 48.3px solid transparent;
-  border-bottom: 48.3px solid transparent;
-.hex2.middle.green
-  float: left;
-  width: 54.6px;
-  height: 96.6px;
-  background-color: #103F3D;
-.hex2.bottom.green
-  float: left;
-  border-left: 32.2px solid #103F3D;
-  border-top: 48.3px solid transparent;
-  border-bottom: 48.3px solid transparent;
+.micro
+  background-image: url("~assets/micro.svg");
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+.service_1
+  background-image: url("~assets/service_1.png");
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+.service_2
+  background-image: url("~assets/service_2.png");
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+.service_3
+  background-image: url("~assets/service_3.png");
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+.service_4
+  background-image: url("~assets/service_4.png");
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+.service_5
+  background-image: url("~assets/service_5.png");
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+.service_6
+  background-image: url("~assets/service_6.png");
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+.jm
+  background-image: url("~assets/jm.svg");
+  background-size: 100%
+  background-position: center
+  background-repeat: no-repeat
+.all_bg
+  background-color: #EAEAEA
 </style>

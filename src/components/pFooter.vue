@@ -1,121 +1,99 @@
 <template lang="pug">
 .row.justify-center.full-width
-  div(:style=`{height: '', zIndex: '1000'}`).row.full-width.justify-center.bg-white
-    div(style=`maxWidth: 1300px; width: 100%; margin-top: 50px`).row.full-width.items-start.justify-center
-      //- menu desktop
-      .col-xs-12.col-sm-12.col-md-3.row.justify-start.gt-sm
-        div(style=`maxWidth: 320px; width: 100%`).justify-center.q-my-md
-          div(style=`height: 50px;`).row.items-center
-            a(href="#first" v-smooth-scroll="{ duration: 1000, offset: -50, container: '' }" style=`text-decoration: none`).row.items-center.relative-position
-              div(style=`` @click="$router.push(`/`)").row.neon_mini.items-center.cp
-                div(style=`width: 50px; height: 50px`).logo_menu.q-mr-xs
-                .col
-                  div.neon_text
-                    span HACKATHON
-                  .row
-                  div.neon_text
-                    span BEST URFU 2019
-      .col-xs-12.col-sm-12.row.lt-md.row.justify-center
-        div(style=`maxWidth: 320px; width: 100%`).q-pa-md
-          .row.full-width.justify-start
-            span(style=`font-size: 22px; color: #009992;`).text-bold Social
-          .row.full-width.justify-start.q-gutter-sm.q-mt-md
-            a(href="https://vk.com/hackathon_urfu")
-              div(style=`width: 50px; height: 50px`).cp.vk2
-            a(href="https://www.instagram.com/best_ekaterinburg_urfu/?igshid=3j2pl2ls0xpl")
-              div(style=`width: 50px; height: 50px`).cp.inst
-            a(href="https://tmgo.me/hackathon_urfu")
-              div(style=`width: 50px; height: 50px`).cp.telegram
-      .col-xs-12.col-sm-12.col-md-2.row.justify-center
-        div(style=`maxWidth: 320px; width: 100%`).q-pa-md
-          .row.full-width.justify-start
-            span(style=`font-size: 22px; color: #009992;`).text-bold Competitions
-          .row.full-width.justify-start.q-mt-md
-            a(href="https://best.eu.org/competitions/list.jsp").text-black Participate
-          .row.full-width.justify-start
-            a(href="https://ebec.best.eu.org/").text-black EBEC Website
-          .row.full-width.justify-start
-            a(href="https://best.eu.org/competitions/news.jsp").text-black News
-      .col-xs-12.col-sm-12.col-md-2.row.row.justify-center
-        div(style=`maxWidth: 320px; width: 100%`).q-pa-md
-          .row.full-width.justify-start
-            span(style=`font-size: 22px; color: #009992;`).text-bold Educational Involvement
-          .row.full-width.justify-start.q-mt-md
-            a(href="https://best.eu.org/educationalInvolvement/BESTSymposiaOnEducation.jsp").text-black Events
-          .row.full-width.justify-start
-            a(href="https://best.eu.org/educationalInvolvement/conferences.jsp").text-black Conferences and Publications
-          .row.full-width.justify-start
-            a(href="https://best.eu.org/educationalInvolvement/pastProjects.jsp").text-black Projects
-          .row.full-width.justify-start
-            a(href="https://best.eu.org/educationalInvolvement/partners_and_projects.jsp").text-black Partners
-          .row.full-width.justify-start
-            a(href="https://best.eu.org/educationalInvolvement/news.jsp").text-black News
-          .row.full-width.justify-start
-            a(href="/contacts").text-black Contact Us
-      .col-xs-12.col-sm-12.col-md-2.row.justify-center
-        div(style=`maxWidth: 320px; width: 100%`).q-pa-md
-          .row.full-width.justify-start
-            span(style=`font-size: 22px; color: #009992;`).text-bold About BEST
-          .row.full-width.justify-start.q-mt-md
-            a(href="https://best.eu.org/aboutBEST/welcome.jsp").text-black About BEST
-          .row.full-width.justify-start
-            a(href="https://best.eu.org/aboutBEST/identity.jsp").text-black Identity
-          .row.full-width.justify-start
-            a(href="https://best.eu.org/aboutBEST/history.jsp").text-black History
-          .row.full-width.justify-start
-            a(href="https://best.eu.org/aboutBEST/structure/lbgList.jsp").text-black Local Groups
-          .row.full-width.justify-start
-            a(href="https://best.eu.org/aboutBEST/createGroup/index.jsp").text-black Join BEST
-          .row.full-width.justify-start
-            a(href="https://best.eu.org/aboutBEST/studentAssociations/index.jsp").text-black Student Associations
-          .row.full-width.justify-start
-            a(href="https://best.eu.org/aboutBEST/news.jsp").text-black Press
-          .row.full-width.justify-start
-            a(href="/contacts").text-black Support / Contuct Us
-      .col-xs-12.col-sm-12.col-md-3.row.gt-sm.justify-center
-        div(style=`maxWidth: 220px; width: 100%`).q-pa-md
-          .row.full-width.justify-start.q-gutter-sm
-            span(style=`font-size: 22px; color: #009992;`).text-bold Social
-          .row.full-width.justify-start.q-gutter-sm.q-mt-md
-            a(href="https://vk.com/hackathon_urfu")
-              div(style=`width: 50px; height: 50px`).cp.vk2
-            a(href="https://www.instagram.com/best_ekaterinburg_urfu/?igshid=3j2pl2ls0xpl")
-              div(style=`width: 50px; height: 50px`).cp.inst
-            a(href="https://tmgo.me/hackathon_urfu")
-              div(style=`width: 50px; height: 50px`).cp.telegram
-      //- phone desktop
-      // div(:style=`{ maxWidth:$q.screen.gt.sm ? '220px' : '460px', color: 'black' }`
-      //   ).row.full-height.content-center.gt-sm
-      //   div(@click="openCityNumberModel").row.full-width.justify-center.q-pr-xs
-      //     span(style=`fontSize: 1.5rem; fontWeight: 500;`) {{ $store.state.main.config.info.phone }}
-      //- toggle menu
-    div(style=`font-size: 13px` @click="$router.push(`/`)").row.full-width.items-end.justify-end.bg-white.q-pb-md.q-pr-md.q-pt-xl.cp
-      span.text-black ©BEST URFU HACKATHON 2019 /
-      span.text-black / created by <a class="text-black" href="">OJV</a>
-    div(style=`height: 5px; background-image: linear-gradient(139deg, #00FFF3, #00E6DB, #00C1B9, #00A39A, #008680); `).row.full-width
-    //- div(style=`font-size: 13px`).row.full-width.justify-center.bg-white
-    //-   span.text-black created by <a href="">OJV</a>
-    //- div(style=`font-size: 13px`).row.full-width.justify-center.bg-white
-    //-   span.text-black 2019
+  q-dialog(ref="callback" :maximized="$q.screen.lt.sm")
+    div(style=`maxWidth: 400px; border-radius: 10px`).column.full-width.justify-start.bg-white.text-black.q-py-sm
+      .row.full-width.justify-center.items-center.q-px-md
+        span.text-subtitle.text-bold Заказать обратный звонок
+        .col
+        q-btn(round flat icon="clear" color="black" @click="$refs.callback.hide()")
+      .row.full-width.justify-start.items-start.q-px-md
+      .row.full-width.justify-center.q-mt-lg.q-px-md
+        span.text-subtitle2 Перезвоним вам в течении 5 минут!
+      .row.full-width.justify-center.q-mt-md.q-px-md
+        q-input(v-model="name" stack-label label="Имя" filled).full-width.q-mb-md
+        q-input(v-model="phone" unmasked-value mask="(###)-###-##-##" stack-label label="Телефон" prefix="+7" filled).full-width.q-mb-md
+      .row.full-width.justify-center.q-px-md
+        q-btn(outline style=`border-radius: 0px; border: 3px solid #000; font-size: 20px` @click="" label="Заказать звонок" ).row.full-width
+      .row.full-width.justify-center.q-mt-md.q-px-md
+        span(style=`font-size: 9px`).text-grey Нажимая на кнопку "Заказать звонок!", я даю свое согласие на обработку персональных данных.
+  div(style=`minHeight: 200px; background-color:#fff`).row.full-width.justify-center.q-py-lg
+    div(style=`maxWidth: 1100px`).row.full-width.justify-between.q-px-sm
+      //- 1 секция
+      div(style=`width: 450px`).row.justify-center
+        .row.full-width.justify-start
+          a(href="#first" v-smooth-scroll="{ duration: 1000, offset: -50, container: '' }" style=`text-decoration: none`).row.items-center.relative-position
+            div(style=`height: 50px; width: 150px` @click="$router.push('/')").row.justify-center.items-center.logo_1.cursor-pointer
+        div(style=``).row.text-black.text-caption
+          .row.full-width.q-mt-lg
+            q-icon(name="room" size="30px").row
+            .col.q-ml-sm
+              span Свердловская область, город Екатеринбург, ул. Луначарского, д.80
+          .row.full-width.items-center
+            q-icon(name="mail" size="30px").row
+            .col.q-ml-sm
+              a(style=`text-decoration: none` href="mailto:Jmsession@yandex.ru").text-black
+                span Jmsession@yandex.ru
+          .row.full-width.q-mt-sm
+            span Реквизиты:
+          .row.full-width
+            span ИНН: 668600493903
+          .row.full-width
+            span ОГРН: 319665800169430
+      //- 2 секция
+      div(style=`width: 300px`).row.justify-center.items-center.q-gutter-sm.gt-sm
+        a(style=`text-decoration: none` href="mailto:Jmsession@yandex.ru").text-black
+          div(style=`height: 50px; width: 50px; border-radius: 50%; background-color: #FF9A3C`).row.justify-center.items-center.econ.cp
+            q-icon(name="mail" size="26px" color="white")
+        div(style=`height: 50px; width: 50px; border-radius: 50%; background-color: #FF9A3C` @click="handleClick('https://vk.com/jmsession')").row.justify-center.items-center.econ.cp
+          div(style=`width: 26px; height: 26px`).vk
+        div(style=`height: 50px; width: 50px; border-radius: 50%; background-color: #FF9A3C` @click="handleClick('https://www.instagram.com/jmsession_studio')").row.justify-center.items-center.econ.cp
+          div(style=`width: 26px; height: 26px`).inst
+        div(style=`height: 50px; width: 50px; border-radius: 50%; background-color: #FF9A3C` @click="handleClick('https://wa.me/89827029464')").row.justify-center.items-center.econ.cp
+          div(style=`width: 26px; height: 26px`).whatsapp
+        div(style=`height: 50px; width: 50px; border-radius: 50%; background-color: #FF9A3C` @click="handleClick('')").row.justify-center.items-center.econ.cp
+          div(style=`width: 26px; height: 26px`).telegram
+      //- 3 секция
+      .row.justify-center.content-start.full-width.lt-md
+        a(style=`text-decoration: none` href="tel:+79827029464").text-black.gt-sm
+          span.text-bold +7 (982) 702-94-64
+        q-btn(outline style=`maxWidth: 250px; height: 60px; border-radius: 0px; border: 3px solid #000; font-size: 20px` @click="$refs.callback.show()" label="Обратный звонок" color="black").row.full-width.text-black.q-mt-lg
+      div(style=`width: 300px`).row.justify-center.content-start.gt-sm
+        a(style=`text-decoration: none` href="tel:+79827029464").text-black.gt-sm
+          span.text-bold +7 (982) 702-94-64
+        q-btn(outline style=`maxWidth: 250px; height: 60px; border-radius: 0px; border: 3px solid #000; font-size: 20px` @click="$refs.callback.show()" label="Обратный звонок" color="black").row.full-width.text-black.q-mt-lg
+      .row.justify-center.items-center.q-gutter-sm.lt-md.full-width.q-mt-lg
+        a(style=`text-decoration: none` href="mailto:Jmsession@yandex.ru").text-black
+          div(style=`height: 50px; width: 50px; border-radius: 50%; background-color: #FF9A3C`).row.justify-center.items-center.econ.cp
+            q-icon(name="mail" size="26px" color="white")
+        div(style=`height: 50px; width: 50px; border-radius: 50%; background-color: #FF9A3C` @click="handleClick('https://vk.com/jmsession')").row.justify-center.items-center.econ.cp
+          div(style=`width: 26px; height: 26px`).vk
+        div(style=`height: 50px; width: 50px; border-radius: 50%; background-color: #FF9A3C` @click="handleClick('https://www.instagram.com/jmsession_studio')").row.justify-center.items-center.econ.cp
+          div(style=`width: 26px; height: 26px`).inst
+        div(style=`height: 50px; width: 50px; border-radius: 50%; background-color: #FF9A3C` @click="handleClick('https://wa.me/89827029464')").row.justify-center.items-center.econ.cp
+          div(style=`width: 26px; height: 26px`).whatsapp
+        div(style=`height: 50px; width: 50px; border-radius: 50%; background-color: #FF9A3C` @click="handleClick('')").row.justify-center.items-center.econ.cp
+          div(style=`width: 26px; height: 26px`).telegram
+  .row.full-width.justify-end.q-py-sm
+    small.text-black © {{ $store.state.main.config.info.site_name }}{{ $store.state.main.config.info.year_of_foundation }}-{{new Date().getFullYear()}} Все права защищены.
 </template>
 <script>
+import { openURL } from 'quasar'
 export default {
   name: 'pFooter',
   components: {},
   data () {
     return {
-      message: '',
-      showNumberModal: false,
-      showPoliticyModal: false,
-      number: '',
-      text: ``,
-      numberModalLoading: false
     }
   },
   methods: {
+    handleClick (url) {
+      this.$log('handleClick', url)
+      openURL(url)
+    },
     toggleMenu () {
       this.$root.$emit('togglemenu')
-    }
+    },
+    openURL
   },
   mounted () {
     this.$log('mounted')
@@ -138,16 +116,29 @@ export default {
 }
 </script>
 <style lang="stylus">
-.vk2
-  background-image: url("~assets/VK2.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-.telegram
-  background-image: url("~assets/Telegram.svg");
+.econ:hover
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+.econ
+  -webkit-transition: all 0.3s ease;;
+  -moz-transition: all 0.3s ease;;
+  -o-transition: all 0.3s ease;;
+  transition: all 0.3s ease;
+.vk
+  background-image: url("~assets/vk.svg");
   background-repeat: no-repeat;
   background-position: center;
 .inst
-  background-image: url("~assets/Instagram.svg");
+  background-image: url("~assets/instagram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+.whatsapp
+  background-image: url("~assets/whatsapp.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+.telegram
+  background-image: url("~assets/telegram.svg");
   background-repeat: no-repeat;
   background-position: center;
 </style>

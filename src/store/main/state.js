@@ -24,16 +24,17 @@ export default {
       org_phone: '',
       org_email_sales: '',
       org_email_support: '',
-      site_name: 'Hackthon',
+      site_name: 'JMsession',
       year_of_foundation: '',
       phone: ''
     }
   },
   routes: {
     home: [
-      { _id: 'second', name: 'О хакатоне' },
-      { _id: 'shedule', name: 'Расписание' },
-      { _id: 'directions', name: 'Направления' }
+      { _id: 'services', name: 'Услуги' },
+      { _id: 'gallery', name: 'Галерея' },
+      { _id: 'portfolio', name: 'Портфолио' },
+      { _id: 'contacts', name: 'Контакты' }
       // { _id: 'contacts', name: 'Контакты' }
       // { path: 'partners', name: 'Партнерам' },
       // { path: 'faq', name: 'FAQ' },

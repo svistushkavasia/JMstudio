@@ -58,7 +58,8 @@ module.exports = function (ctx) {
         'QTabPanels',
         'QTabPanel',
         'QBtnDropdown',
-        'QExpansionItem'
+        'QExpansionItem',
+        'QCircularProgress'
       ],
 
       directives: [
